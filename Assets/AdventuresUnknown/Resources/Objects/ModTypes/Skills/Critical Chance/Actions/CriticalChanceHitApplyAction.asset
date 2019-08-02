@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 796238176, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: CriticalChanceHitApplyAction
+  m_EditorClassIdentifier: 
+  m_Priority: 0
+  m_ActionType: {fileID: 11400000, guid: a2bec0644f8ee1e46937b61c3d21f419, type: 2}
+  m_ConditionAction: {fileID: 11400000, guid: aa8d11535563efb4886d0ddab8ed6c71, type: 2}
+  m_Inverted: 0
+  m_FollowAction: {fileID: 11400000, guid: 83ef8d791f1a51c4bb41d3e60baf027b, type: 2}

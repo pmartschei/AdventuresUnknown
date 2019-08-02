@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1400587064, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.tags.level.quick
+  m_EditorClassIdentifier: 
+  m_Identifier: core.tags.level.quick
+  m_Overrides: 0
+  m_TagName:
+    m_LocalizedIdentifier: core.tags.level.quick
+  m_Color: {r: 0, g: 0.9797907, b: 1, a: 1}

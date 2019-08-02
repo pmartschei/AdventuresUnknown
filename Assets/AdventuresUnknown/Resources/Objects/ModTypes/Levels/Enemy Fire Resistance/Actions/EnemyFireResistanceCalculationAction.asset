@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 796238176, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: EnemyFireResistanceCalculationAction
+  m_EditorClassIdentifier: 
+  m_Priority: 0
+  m_ActionType: {fileID: 11400000, guid: 3547fe438fd1e4243bb5267728106ff0, type: 2}
+  m_ConditionAction: {fileID: 11400000, guid: e40ff6aa6d5ba1e4aa0bd1ab4dbda34c, type: 2}
+  m_Inverted: 0
+  m_FollowAction: {fileID: 11400000, guid: 83b060e57aad6c043b1060af83ef8e98, type: 2}

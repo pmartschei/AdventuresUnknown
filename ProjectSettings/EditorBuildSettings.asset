@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/AdventuresUnknown/Scenes/core.scenes.root.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/AdventuresUnknown/Scenes/core.scenes.play.unity
+    guid: 504a455f6b5260745a9cfef0e181ca49
+  - enabled: 1
+    path: Assets/AdventuresUnknown/Scenes/core.scenes.hangar.unity
+    guid: 34679df178f58574a9fcb8e29798060d
+  - enabled: 1
+    path: Assets/AdventuresUnknown/Scenes/core.scenes.title.unity
+    guid: 3b271d25995589642ade6bc98ed016df
   m_configObjects: {}

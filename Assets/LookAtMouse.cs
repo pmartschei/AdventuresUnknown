@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    private float m_AdditionalZRotation = -90.0f;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +17,7 @@ public class LookAtMouse : MonoBehaviour
             (calculatedScreenPos.x - transform.position.x)) * Mathf.Rad2Deg;
         this.transform.rotation = Quaternion.RotateTowards(
             this.transform.rotation, 
-            Quaternion.Euler(this.transform.rotation.eulerAngles.x, this.transform.rotation.eulerAngles.y, z), 
+            Quaternion.Euler(this.transform.rotation.eulerAngles.x, this.transform.rotation.eulerAngles.y, z+ m_AdditionalZRotation), 
             Time.deltaTime * 360.0f);
     }
 }

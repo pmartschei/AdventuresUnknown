@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223199053, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.cac.default
+  m_EditorClassIdentifier: 
+  m_Identifier: core.cac.default
+  m_Overrides: 0
+  m_CraftingActions:
+  - m_CraftingText:
+      m_LocalizedIdentifier: core.crafting.test
+    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Enabler: {fileID: 0}
+    m_Invoker: {fileID: 11400000, guid: ecd2c66192059204d822258925d4e837, type: 2}
+  - m_CraftingText:
+      m_LocalizedIdentifier: core.crafting.test2
+    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Enabler: {fileID: 0}
+    m_Invoker: {fileID: 0}

@@ -11,11 +11,10 @@ using AdventuresUnknownSDK.Core.UI.Items;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
 using AdventuresUnknownSDK.Core.Objects.Localization;
 using AdventuresUnknownSDK.Core.Objects;
-using AdventuresUnknownSDK.Core.Datas;
 using AdventuresUnknownSDK.Core.Log;
 using System.Text;
 using AdventuresUnknown.Core.Utils;
-using Assets.AdventuresUnknown.Core.Commands;
+using AdventuresUnknown.Core.Commands;
 
 public class LoadAssetBundle : MonoBehaviour {
 
@@ -77,11 +76,16 @@ public class LoadAssetBundle : MonoBehaviour {
         //    logicHandler.Init();
         //}
 
-        PlayerManager.SpaceShip.AddActiveStat(ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.equipment"));
+        PlayerManager.SpaceShip.Entity.AddActiveStat(ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.equipment"));
         CommandManager.AddCommand(new HelpCommand("help"));
         CommandManager.AddCommand(new ClearCommand("clear"));
         CommandManager.AddCommand(new CreateItemCommand("createitem"));
         CommandManager.AddCommand(new HealCommand("heal"));
+        CommandManager.AddCommand(new LoadSceneCommand("loadscene"));
+        CommandManager.AddCommand(new SpawnEnemyCommand("spawnenemy"));
+        CommandManager.AddCommand(new SaveCommand("save"));
+        CommandManager.AddCommand(new LoadCommand("load"));
+        CommandManager.AddCommand(new GenerateNewLevelsCommand("generatelevels"));
     }
 
     public IEnumerable<Type> GetDerivedTypes(Assembly assembly,Type baseType)

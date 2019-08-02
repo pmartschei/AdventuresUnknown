@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -716943510, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.modtypes.ship.energyregen.more
+  m_EditorClassIdentifier: 
+  m_Identifier: core.modtypes.ship.energyregen.more
+  m_Overrides: 0
+  m_ModTypeIdentifier:
+    m_Identifier: core.modtypes.ship.energyregen
+  m_CalculationType: 2

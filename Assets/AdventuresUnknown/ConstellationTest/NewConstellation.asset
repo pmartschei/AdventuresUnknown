@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031c77f50463c44499d5ecf8ea343754, type: 3}
+  m_Name: NewConstellation
+  m_EditorClassIdentifier: 
+  script:
+    Nodes:
+    - Name: CeilToInt
+      Namespace: Math
+      Guid: 68ccecbe-b0a7-4335-8a21-b1bad5c2fcaf
+      XPosition: 753
+      YPosition: 381
+      Inputs:
+      - Guid: 71cdf878-58bf-4f74-adb5-fe04f0fe4145
+        IsWarm: 1
+        Type: 
+        Description: a
+      Outputs:
+      - Guid: 3ef45a58-7c70-4c56-ade7-3ee3692d7790
+        IsWarm: 0
+        Type: 
+        Description: smallest integer greater to or equal to a
+      AttributesData: []
+    Links: []
+  IsInstance: 0
+  IsDifferentThanSource: 0

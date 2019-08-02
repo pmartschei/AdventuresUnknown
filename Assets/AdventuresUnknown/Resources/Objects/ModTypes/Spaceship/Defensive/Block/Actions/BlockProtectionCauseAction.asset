@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1603593881, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: BlockProtectionCauseAction
+  m_EditorClassIdentifier: 
+  m_Priority: 0
+  m_ProtectionCause: {fileID: 11400000, guid: 2f272c80027c0ef45a172e9b1a8ec7e6, type: 2}
+  m_NotifyTypeAttacker: {fileID: 11400000, guid: 0fbbadce73f90da438c48a0fae8fcb59,
+    type: 2}
+  m_NotifyTypeDefender: {fileID: 11400000, guid: 0fbbadce73f90da438c48a0fae8fcb59,
+    type: 2}

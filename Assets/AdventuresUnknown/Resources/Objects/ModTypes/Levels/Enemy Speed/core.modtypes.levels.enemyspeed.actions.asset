@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1020389993, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.modtypes.levels.enemyspeed.actions
+  m_EditorClassIdentifier: 
+  m_BaseActions:
+  - {fileID: 11400000, guid: da1bb7f0f53483e4b8a82dae3a9ce6a4, type: 2}

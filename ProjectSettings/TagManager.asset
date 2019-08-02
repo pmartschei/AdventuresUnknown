@@ -14,14 +14,14 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - team0
+  - team1
+  - team2
+  - team3
+  - team4
+  - team5
+  - team6
+  - team7
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2723341917
+    locked: 0
+  - name: Attacks
+    uniqueID: 364443601
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Entities
+    uniqueID: 3087922345
+    locked: 0
+  - name: UI
+    uniqueID: 2145049179
     locked: 0

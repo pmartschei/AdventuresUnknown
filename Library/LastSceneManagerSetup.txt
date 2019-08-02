@@ -1,4 +1,13 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/AdventuresUnknown/Scenes/core.scenes.root.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/AdventuresUnknown/Scenes/core.scenes.play.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/AdventuresUnknown/Scenes/core.scenes.hangar.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/AdventuresUnknown/Scenes/core.scenes.title.unity
+  isLoaded: 0
+  isActive: 0
