@@ -37,7 +37,6 @@ namespace AdventuresUnknown.Scripts.Core.Attacks
             {
                 SpawnSingleInstance(controller, spaceShip, controller.transform.position, startPositions[i]);
             }
-            yield return null;
         }
         protected override bool CheckDuration()
         {

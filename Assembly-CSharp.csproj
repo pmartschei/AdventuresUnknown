@@ -83,7 +83,9 @@
     <Compile Include="Assets\_MK\MKGlowFree\Scripts\Resources.cs" />
     <Compile Include="Assets\_MK\MKGlowFree\Scripts\Settings.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\CustomBarrageAttack.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\MineAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\MinionSpawnAttack.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\NovaAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\ShotgunAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\SplitAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\ClearCommand.cs" />
@@ -98,6 +100,8 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\AttackState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\SniperAttackState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\WanderState.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Utility\LayAttackState.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Utility\MultiState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIActiveGemDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIBasicInventorySlotDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIBasicItemStackDisplay.cs" />
@@ -112,12 +116,15 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\LevelController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\LevelControllerEditor.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\PushingBorder.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UIHistoryController.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UIHistoryDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UILevelDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UILevelOverlay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UILevelSelectionController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UICraftingActionDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIHangarController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorBuyController.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorSlotDrop.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIGameModeDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIPlayMenu.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UITitleSceneMenu.cs" />
@@ -149,6 +156,8 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\LogEntryEvent.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\LogLevel.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\StringChecker.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\HexagonLayoutGroup.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\UIPauseMenu.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIExperiencePercentageImage.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIStatPercentageImage.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIStatText.cs" />
@@ -327,7 +336,6 @@
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationBehaviour.cs" />
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationComponent.cs" />
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationEditable.cs" />
-    <Compile Include="Assets\HotkeyDisplayData.cs" />
     <Compile Include="Assets\ItemDrop.cs" />
     <Compile Include="Assets\LoadAssetBundle.cs" />
     <Compile Include="Assets\LookAtMouse.cs" />
@@ -349,8 +357,11 @@
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Unit.cs" />
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\UnitExplosion.cs" />
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\WaypointPath.cs" />
+    <Compile Include="Assets\RotateToCamera.cs" />
     <Compile Include="Assets\ShowOnLevelFail.cs" />
+    <Compile Include="Assets\ShowOnLevelSuccess.cs" />
     <Compile Include="Assets\UICreateSpaceshipButton.cs" />
+    <Compile Include="Assets\UIDimensionChange.cs" />
     <Compile Include="Assets\UIGemPanelController.cs" />
     <Compile Include="Assets\UIHotkeyDisplay.cs" />
     <Compile Include="Assets\UIHotkeyPopup.cs" />
@@ -359,6 +370,7 @@
     <Compile Include="Assets\UISaveFileDisplay.cs" />
     <Compile Include="Assets\UISwitch.cs" />
     <Compile Include="Assets\UIWaveDisplay.cs" />
+    <Compile Include="Assets\UIWinController.cs" />
     <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
     <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
     <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_SAUIM.cs" />
@@ -563,7 +575,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\AdventuresUnknown\Textures\Backgrounds\License free.txt" />
     <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Hunter.BT.txt" />
-    <None Include="Assets\AdventuresUnknown\Prefabs\Enemies\BasicEnemy.BT.txt" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Downsample.hlsl" />

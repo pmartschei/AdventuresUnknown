@@ -1,5 +1,6 @@
 ﻿using AdventuresUnknownSDK.Core.Log;
 using AdventuresUnknownSDK.Core.Managers;
+using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Enemies;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
 using AdventuresUnknownSDK.Core.Objects.Items;
@@ -26,6 +27,11 @@ namespace AdventuresUnknown.Core.Commands
         }
         public override void Evaluate(params string[] parameters)
         {
+            ContextData cd = ObjectsManager.FindObjectByIdentifier<ContextData>("core.datas.context");
+            if (cd)
+            {
+                cd.SaveFileName = "test.sav";
+            }
             PlayerManager.Save();
         }
 

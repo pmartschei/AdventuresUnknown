@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Identifier: core.datas.context
   m_Overrides: 0
-  m_ShipName: lul
-  m_Level: 15
-  m_Experience: 34
+  m_ShipName: 
+  m_Level: 1
+  m_Experience: 0
   m_PlayTime: 0
-  m_GameMode: core.gamemodes.journal
+  m_GameMode: core.gamemodes.journey

@@ -13,10 +13,11 @@ namespace AdventuresUnknown
         [SerializeField] private IGameText m_NameText = null;
         [SerializeField] private IGameText m_LevelText = null;
         [SerializeField] private IGameText m_PlayedText = null;
+        [SerializeField] private CanvasGroup m_CanvasGroup = null;
 
         private FileObject m_FileObject = null;
 
-        private GameObject m_DragObject = null;
+        private UISaveFileDisplay m_DragObject = null;
 
         public FileObject FileObject { get => m_FileObject; }
 
@@ -54,8 +55,10 @@ namespace AdventuresUnknown
         public void OnBeginDrag(PointerEventData eventData)
         {
             eventData.useDragThreshold = false;
-            m_DragObject = Instantiate(this.gameObject,this.gameObject.transform.root);
+            m_DragObject = Instantiate(this,this.gameObject.transform.root);
             m_DragObject.GetComponent<RectTransform>().sizeDelta = GetComponent<RectTransform>().sizeDelta;
+            m_DragObject.m_CanvasGroup.interactable = false;
+            m_DragObject.m_CanvasGroup.blocksRaycasts = false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -71,7 +74,7 @@ namespace AdventuresUnknown
         {
             if (m_DragObject)
             {
-                Destroy(m_DragObject);
+                Destroy(m_DragObject.gameObject);
             }
             if (eventData.used)
             {

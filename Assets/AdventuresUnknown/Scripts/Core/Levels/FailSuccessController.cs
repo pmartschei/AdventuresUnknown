@@ -17,11 +17,15 @@ namespace AdventuresUnknown.Core.Levels
 
         private void OnSuccess()
         {
-            JourneyData jd = ObjectsManager.FindObjectByIdentifier<JourneyData>("core.datas.journey");
+            JourneyData journeyData = ObjectsManager.FindObjectByIdentifier<JourneyData>("core.datas.journey");
 
-            if (!jd) return;
+            if (!journeyData) return;
 
-            jd.Difficulty += 1;
+            journeyData.AddCompletedLevel(LevelManager.CurrentLevel);
+            journeyData.Difficulty++;
+            journeyData.GenerateNextLevels();
+
+            PlayerManager.Save();
         }
 
         private void OnFail()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UI.Extensions;
 
 namespace AdventuresUnknown.Core.Levels
 {
@@ -10,7 +11,9 @@ namespace AdventuresUnknown.Core.Levels
     { 
         [SerializeField] private Button m_Button = null;
         [SerializeField] private ExtensionsToggleGroup m_ExtensionsToggleGroup = null;
-
+        [SerializeField] private RectTransform[] m_LevelDisplays = null;
+        [SerializeField] private RadialLayout m_RadialLayout = null;
+        
         private UILevelDisplay m_SelectedDisplay = null;
 
         private void Start()
@@ -38,6 +41,19 @@ namespace AdventuresUnknown.Core.Levels
             if (m_SelectedDisplay == null) return;
             LevelManager.CurrentLevel = m_SelectedDisplay.CurrentLevel;
             SceneManager.LoadScene("core.scenes.play");
+        }
+        public void OnWidthChange(float width)
+        {
+            float unitWidth = width / 3.0f;
+            if (m_RadialLayout)
+            {
+                m_RadialLayout.fDistance = unitWidth;
+            }
+            foreach(RectTransform levelDisplay in m_LevelDisplays)
+            {
+                if (!levelDisplay) continue;
+                levelDisplay.sizeDelta = new Vector2(unitWidth, unitWidth);
+            }
         }
     }
 }

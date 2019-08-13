@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace AdventuresUnknown.Core.Logic.Hangar
 {
@@ -12,6 +13,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
         [SerializeField] private Transform m_RightTransform = null;
         [SerializeField] private Transform m_FullTransform = null;
         [SerializeField] private Transform m_InactiveTransform = null;
+        [SerializeField] private UnityEvent m_OnStartEvent = new UnityEvent();
 
         private UIHangerFrame m_LeftHangarFrame = null;
         private UIHangerFrame m_RightHangarFrame = null;
@@ -25,11 +27,14 @@ namespace AdventuresUnknown.Core.Logic.Hangar
         private void Start()
         {
             DisableAll();
+            m_OnStartEvent.Invoke();
         }
 
         private void DisableAll()
-        { 
-
+        {
+            DisableFrame(m_LeftHangarFrame);
+            DisableFrame(m_RightHangarFrame);
+            DisableFrame(m_FullHangarFrame);
         }
 
         public void ShowFrame(UIHangerFrame hangarFrame)

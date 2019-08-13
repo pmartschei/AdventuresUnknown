@@ -78,18 +78,17 @@ namespace AdventuresUnknown.Core.Logic.Hangar
         {
             if (!PlayerCanBuySelectedItem()) return;
 
-            CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
-            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value);
-
-            ItemStack newItemStack = m_SelectedItem.Copy();
-            m_SelectedInventorySlot.Inventory.RemoveItemStack(m_SelectedInventorySlot.Slot);
-
-            //PlayerManager.MainInventory?
-
             Inventory inventory = ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.inventory");
             if (!inventory) return;
+            ItemStack newItemStack = m_SelectedItem.Copy();
+            //TODO IsFull Check
+            //if (inventory.CanAddItemStack(newItemStack)) return;
 
+            CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
+            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value);
+            m_SelectedInventorySlot.Inventory.RemoveItemStack(m_SelectedInventorySlot.Slot);
             inventory.AddItemStack(newItemStack);
+
             m_ToggleGroup.SetAllTogglesOff();
             UpdateVisuals();
         }

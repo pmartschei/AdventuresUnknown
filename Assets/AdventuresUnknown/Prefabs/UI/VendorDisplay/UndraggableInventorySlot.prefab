@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 117620744026444957}
   - component: {fileID: 8181739407127664629}
   - component: {fileID: 2794253371359791841}
+  - component: {fileID: 743042183710552240}
   m_Layer: 5
   m_Name: UndraggableInventorySlot
   m_TagString: Untagged
@@ -304,6 +305,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.ExtensionsToggle+ToggleEventObject, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &743042183710552240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4482088556448468449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b186a9bac41490640820159ca61c5b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IInventorySlot: {fileID: 117620744026444957}
 --- !u!1 &4482088556518146167
 GameObject:
   m_ObjectHideFlags: 0

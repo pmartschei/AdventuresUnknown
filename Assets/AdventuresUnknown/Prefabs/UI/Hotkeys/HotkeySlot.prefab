@@ -271,7 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94791593fa7c2747bc0d2aaabf2a2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 
+  m_Identifier: slot_1
+  m_HotkeyData:
+    m_Identifier: core.datas.hotkeys
   m_Hotkey: 49
   m_HotkeyText: {fileID: 1656146645217880532}
   m_ActiveGemDisplay: {fileID: 55679315093644416}
@@ -437,7 +439,7 @@ MonoBehaviour:
     lineCount: 0
     pageCount: 0
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}

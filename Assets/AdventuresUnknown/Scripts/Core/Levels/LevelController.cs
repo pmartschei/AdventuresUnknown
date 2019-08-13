@@ -7,6 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AdventuresUnknownSDK.Core.Objects.Inventories.ItemStack;
 
 namespace AdventuresUnknown.Core.Levels
 {
@@ -23,10 +24,9 @@ namespace AdventuresUnknown.Core.Levels
         private EntityBehaviour m_EntityBehaviour = null;
         private BoxCollider m_BoxCollider = null;
 
-        private List<Entity> m_AffectedEntities = new List<Entity>();
+        private List<Entity> m_RegisteredEntities = new List<Entity>();
 
         #region Properties
-        public bool StatsChanged { get; set; }
         #endregion
         #region Methods
         void Awake()
@@ -39,6 +39,7 @@ namespace AdventuresUnknown.Core.Levels
                 GenerateLevelBorders();
             }
         }
+
         private void Start()
         {
             if (!Application.isPlaying) return;
@@ -46,6 +47,7 @@ namespace AdventuresUnknown.Core.Levels
         }
         private void Update()
         {
+            if (GameSettingsManager.IsPaused) return;
             if (PlayerManager.PlayerController == null)
             {
                 LevelManager.IsPaused = true;
@@ -112,24 +114,12 @@ namespace AdventuresUnknown.Core.Levels
         {
             LevelManager.IsPaused = false;
             m_EntityBehaviour.Entity.Reset();
-            m_EntityBehaviour.Entity.AddActiveStat(this);
+            Register(m_EntityBehaviour.Entity);
             Level level = LevelManager.CurrentLevel;
             if (level != null)
             {
                 level.Reset();
                 m_BoxCollider.size = new Vector3(level.Width, level.Height, 0.0f);
-            }
-            StatsChanged = true;
-        }
-
-        public void Initialize(Entity activeStat)
-        {
-            Level level = LevelManager.CurrentLevel;
-            if (level == null) return;
-
-            foreach (var attribute in level.Attributes)
-            {
-                activeStat.GetStat(attribute.BasicModBase.ModTypeIdentifier).AddStatModifier(new StatModifier(attribute.Value, attribute.BasicModBase.CalculationType, this));
             }
         }
 
@@ -138,8 +128,7 @@ namespace AdventuresUnknown.Core.Levels
             EntityController controller = other.GetComponentInParent<EntityController>();
             if (controller)
             {
-                controller.SpaceShip.Entity.AddActiveStat(this);
-                m_AffectedEntities.Add(controller.SpaceShip.Entity);
+                Register(controller.SpaceShip.Entity);
             }
         }
         private void OnTriggerExit(Collider other)
@@ -147,16 +136,15 @@ namespace AdventuresUnknown.Core.Levels
             EntityController controller = other.GetComponentInParent<EntityController>();
             if (controller)
             {
-                controller.SpaceShip.Entity.RemoveActiveStat(this);
-                m_AffectedEntities.Remove(controller.SpaceShip.Entity);
+                Unregister(controller.SpaceShip.Entity);
             }
         }
 
         private void OnDestroy()
         {
-            foreach(Entity entity in m_AffectedEntities)
+            foreach(Entity entity in m_RegisteredEntities)
             {
-                entity.RemoveActiveStat(this);
+                RemoveAllModifiers(entity);
             }
         }
         private void OnDrawGizmos()
@@ -174,6 +162,44 @@ namespace AdventuresUnknown.Core.Levels
         public void GotoHangar()
         {
             SceneManager.LoadScene("core.scenes.hangar");
+        }
+
+        private void ChangeModifiersAll()
+        {
+            foreach (Entity entity in m_RegisteredEntities)
+            {
+                AddModifiers(entity);
+            }
+        }
+
+        private void AddModifiers(Entity entity)
+        {
+            RemoveAllModifiers(entity);
+
+            Level level = LevelManager.CurrentLevel;
+            if (level == null) return;
+            foreach (ValueMod valueMod in level.Attributes)
+            {
+                valueMod.BasicModBase.AddStatModifierTo(entity, valueMod.Value, this);
+            }
+        }
+
+        private void RemoveAllModifiers(Entity entity)
+        {
+            entity.RemoveAllModifiersBySource(this);
+        }
+
+        public void Register(Entity entity)
+        {
+            if (m_RegisteredEntities.Contains(entity)) return;
+            m_RegisteredEntities.Add(entity);
+            AddModifiers(entity);
+        }
+
+        public void Unregister(Entity entity)
+        {
+            m_RegisteredEntities.Remove(entity);
+            RemoveAllModifiers(entity);
         }
         #endregion
     }

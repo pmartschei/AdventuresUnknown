@@ -6,8 +6,8 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/AdventuresUnknown/Scenes/core.scenes.hangar.unity
-  isLoaded: 1
+  isLoaded: 0
   isActive: 0
 - path: Assets/AdventuresUnknown/Scenes/core.scenes.title.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0

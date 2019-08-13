@@ -23,4 +23,7 @@ MonoBehaviour:
   m_MaxValue: 1
   m_Round: 1
   m_WeightedTagList:
-    m_WeightedTags: []
+    m_WeightedTags:
+    - Tag:
+        m_Identifier: core.tags.equipment.thruster
+      Weight: 50

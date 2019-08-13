@@ -16,7 +16,8 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         [SerializeField] private ActionType m_DeathAction = null;
         [SerializeField] private ActionType m_SpawnAction = null;
         [SerializeField] private ActionType m_BlockAction = null;
-        [SerializeField] private ActionType m_HitGenerationAction = null;
+        [SerializeField] private ActionType m_HitGenerationOffensiveAction = null;
+        [SerializeField] private ActionType m_HitGenerationDefensiveAction = null;
         [SerializeField] private ActionType m_HitCalculationAction = null;
         [SerializeField] private ActionType m_HitApplyAction = null;
         [SerializeField] private ActionType m_AttackCooldownGenerationAction = null;
@@ -29,7 +30,8 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         protected override ActionType DeathImpl { get => m_DeathAction; set => m_DeathAction = value; }
         protected override ActionType SpawnImpl { get => m_SpawnAction; set => m_SpawnAction = value; }
         protected override ActionType BlockImpl { get => m_BlockAction; set => m_BlockAction = value; }
-        protected override ActionType HitGenerationImpl { get => m_HitGenerationAction; set => m_HitGenerationAction = value; }
+        protected override ActionType HitGenerationOffensiveImpl { get => m_HitGenerationOffensiveAction; set => m_HitGenerationOffensiveAction = value; }
+        protected override ActionType HitGenerationDefensiveImpl { get => m_HitGenerationDefensiveAction; set => m_HitGenerationDefensiveAction = value; }
         protected override ActionType HitCalculationImpl { get => m_HitCalculationAction; set => m_HitCalculationAction = value; }
         protected override ActionType HitApplyImpl { get => m_HitApplyAction; set => m_HitApplyAction = value; }
         protected override ActionType AttackCooldownGenerationImpl { get => m_AttackCooldownGenerationAction; set => m_AttackCooldownGenerationAction = value; }

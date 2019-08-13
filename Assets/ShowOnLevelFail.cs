@@ -16,7 +16,7 @@ public class ShowOnLevelFail : MonoBehaviour
     private void OnFail()
     {
         if (m_CanvasGroup)
-        m_CanvasGroup.Show();
+            m_CanvasGroup.Show();
     }
 
     private void OnDisable()

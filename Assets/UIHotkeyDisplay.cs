@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using AdventuresUnknownSDK.Core.Objects.Datas;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIHotkeyDisplay : MonoBehaviour

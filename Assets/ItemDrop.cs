@@ -31,6 +31,7 @@ public class ItemDrop : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,
         {
             Destroy(gameObject);
             OnPointerExit(null);
+            PlayerManager.Save();
             return;
         }
         if (!m_Display) return;

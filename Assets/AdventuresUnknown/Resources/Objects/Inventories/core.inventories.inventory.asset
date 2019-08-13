@@ -15,10 +15,17 @@ MonoBehaviour:
   m_Identifier: core.inventories.inventory
   m_Overrides: 0
   m_Size: 30
-  m_GameEvent:
-    m_Identifier: core.gameevent.inventoryupdate
   m_ItemStacks:
   - m_ItemIdentifier:
+      m_Identifier: core.items.equipment.basic
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ImplicitMods:
+    - m_Value: 5
+      m_BasicModBaseIdentifier:
+        m_Identifier: core.modtypes.ship.life.flat
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 1
@@ -45,13 +52,7 @@ MonoBehaviour:
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
-    m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
+    m_Amount: 1
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:

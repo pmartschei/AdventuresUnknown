@@ -29,7 +29,7 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Items
                 return false;
             }
             StringBuilder sb = new StringBuilder();
-            if (modTypes == null)
+            if (modTypes == null || modTypes.Length == 0)
             {
                 foreach (Stat stat in entity.Stats)
                 {

@@ -80,8 +80,8 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Logic.Hangar
         {
             if (m_CurrentCraftingAction == null) return;
             if (!HasEnoughCurrency()) return;
-            RemoveCurrency();
             m_CurrentCraftingAction.Invoke(m_CurrentItemStack);
+            RemoveCurrency();
         }
 
         private void RemoveCurrency()

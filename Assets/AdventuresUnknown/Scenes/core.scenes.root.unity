@@ -97,21 +97,21 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 1.4
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.175
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 31333d3b65183d84ab913ce562d9b0ae, type: 2}
 --- !u!1 &12615352
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,9 +419,11 @@ MonoBehaviour:
   m_DeathAction: {fileID: 11400000, guid: d5ee8bf84f649fc4c8f5b9678554f130, type: 2}
   m_SpawnAction: {fileID: 11400000, guid: 822894a7ce4876842ac6360ea303f4d4, type: 2}
   m_BlockAction: {fileID: 11400000, guid: 0fbbadce73f90da438c48a0fae8fcb59, type: 2}
-  m_HitGenerationAction: {fileID: 11400000, guid: 50b7c485fc9816545b50d3b0c21e86a5,
+  m_HitGenerationOffensiveAction: {fileID: 11400000, guid: 50b7c485fc9816545b50d3b0c21e86a5,
     type: 2}
-  m_HitCalculationAction: {fileID: 11400000, guid: 9ad301169cdefd048a30ab0c80e5550a,
+  m_HitGenerationDefensiveAction: {fileID: 11400000, guid: 02610ff5ab60b1e4f8c8f09ab4e555fc,
+    type: 2}
+  m_HitCalculationAction: {fileID: 11400000, guid: 3547fe438fd1e4243bb5267728106ff0,
     type: 2}
   m_HitApplyAction: {fileID: 11400000, guid: a2bec0644f8ee1e46937b61c3d21f419, type: 2}
   m_AttackCooldownGenerationAction: {fileID: 11400000, guid: cbeb23d4ee3b0eb4e98eb347f7dfedc2,
@@ -442,7 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebaae9533b94e84d84d27196fb2b227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Block: {fileID: 11400000, guid: 2f272c80027c0ef45a172e9b1a8ec7e6, type: 2}
+  m_Block: {fileID: 0}
 --- !u!224 &688096979 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
@@ -903,7 +905,7 @@ PrefabInstance:
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1728
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
@@ -913,7 +915,7 @@ PrefabInstance:
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
@@ -923,7 +925,7 @@ PrefabInstance:
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
@@ -988,7 +990,7 @@ PrefabInstance:
     - target: {fileID: 7829222018079078008, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1024.7797
+      value: -1024.7803
       objectReference: {fileID: 0}
     - target: {fileID: 7829222018544442298, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
@@ -1154,6 +1156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829222017267532325, guid: 31845865167bc034eac4649a08a28c16,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 434.96875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31845865167bc034eac4649a08a28c16, type: 3}

@@ -31,11 +31,16 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Items
                 if (m_Display)
                 {
                     Destroy(m_Display.gameObject);
+                    m_Display = null;
                 }
-                if (itemStack.IsEmpty)
-                {
-                    return true;
-                }
+            }
+
+            if (itemStack.IsEmpty)
+            {
+                return true;
+            }
+            if (m_Display == null)
+            {
                 m_Display = Instantiate(itemStack.Item.ItemStackDisplay, m_DisplayTransform);
             }
             m_Display.Display(itemStack);

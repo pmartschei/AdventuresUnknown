@@ -16,5 +16,5 @@ MonoBehaviour:
   m_Overrides: 0
   m_CurrencyName:
     m_LocalizedIdentifier: core.currencies.gold
-  m_TextColor: {r: 1, g: 0.9411765, b: 0, a: 1}
-  m_Icon: {fileID: 21300000, guid: 988e0d86d9ae39f41bf00221b310b71f, type: 3}
+  m_TextColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+  m_Icon: {fileID: 21300000, guid: 1f104404da0f4084885c656705102f9d, type: 3}

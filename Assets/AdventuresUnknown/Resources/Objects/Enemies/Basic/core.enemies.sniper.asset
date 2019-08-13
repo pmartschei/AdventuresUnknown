@@ -58,6 +58,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-  m_Difficulty: 1
+  m_Difficulty: 2
   m_Model: {fileID: 8224741927823638763, guid: 6e690a6a515a0474daf1f29429f8c143, type: 3}
   m_AttackPattern: {fileID: 11400000, guid: af2beb3ffb7f0634baca3954d4aa953f, type: 2}

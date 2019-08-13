@@ -1,4 +1,5 @@
-﻿using AdventuresUnknownSDK.Core.Entities.Controllers;
+﻿using AdventuresUnknownSDK.Core.Entities;
+using AdventuresUnknownSDK.Core.Entities.Controllers;
 using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Enemies;
@@ -44,16 +45,18 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         {
             ProceduralLevel proceduralLevel = new ProceduralLevel(difficulty);
 
-            GenerateFromSeed(proceduralLevel,Random.Range(int.MinValue, int.MaxValue));
+            proceduralLevel.Seed = Random.Range(int.MinValue, int.MaxValue);
+
+            GenerateFromSeed(proceduralLevel);
 
             return proceduralLevel;
         }
 
-        private void GenerateFromSeed(ProceduralLevel level,int seed)
+        private void GenerateFromSeed(ProceduralLevel level)
         {
-            level.Seed = seed;
-            Random.InitState(seed + level.Difficulty);
+            Random.InitState(level.Seed + level.Difficulty);
             if (m_LevelGeneratorDescription == null) return;
+
             m_LevelGeneratorDescription.Init(level);
             m_LevelGeneratorDescription.GenerateTags(level);
             m_LevelGeneratorDescription.GenerateAttributes(level);
@@ -85,7 +88,9 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         {
             if (enemy == null) return null;
             EnemyModel enemyModel = Instantiate(enemy.Model, pos, Quaternion.identity,UIManager.EntityTransform);
-            enemyModel.EntityBehaviour.Entity.Description.Enemy = enemy;
+            EntityDescription entityDescription = enemyModel.EntityBehaviour.Entity.Description;
+            entityDescription.Enemy = enemy;
+            entityDescription.EntityType = EntityType.SpaceShip;
             EnemyController ec = enemyModel.EntityController as EnemyController;
             if (ec)
             {
@@ -93,6 +98,17 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
             }
             return enemyModel;
 
+        }
+
+        protected override Level GenerateFromCompletedLevelImpl(CompletedLevel level)
+        {
+            ProceduralLevel proceduralLevel = new ProceduralLevel(level.Difficulty);
+
+            proceduralLevel.Seed = level.Seed;
+
+            GenerateFromSeed(proceduralLevel);
+
+            return proceduralLevel;
         }
         #endregion
     }

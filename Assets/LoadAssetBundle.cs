@@ -76,7 +76,11 @@ public class LoadAssetBundle : MonoBehaviour {
         //    logicHandler.Init();
         //}
 
-        PlayerManager.SpaceShip.Entity.AddActiveStat(ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.equipment"));
+        Inventory inventory = ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.equipment");
+        if (inventory)
+        {
+            inventory.Register(PlayerManager.SpaceShip.Entity);
+        }
         CommandManager.AddCommand(new HelpCommand("help"));
         CommandManager.AddCommand(new ClearCommand("clear"));
         CommandManager.AddCommand(new CreateItemCommand("createitem"));

@@ -3,10 +3,12 @@ using AdventuresUnknownSDK.Core.Entities;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
 using AdventuresUnknownSDK.Core.Logic.ActiveGemContainers;
 using AdventuresUnknownSDK.Core.Managers;
+using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
 using AdventuresUnknownSDK.Core.Objects.Items;
 using AdventuresUnknownSDK.Core.UI.Interfaces;
 using AdventuresUnknownSDK.Core.UI.Items;
+using AdventuresUnknownSDK.Core.Utils.Identifiers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
 {
 
     [SerializeField] private string m_Identifier = "";
+    [SerializeField] private HotkeyDataIdentifier m_HotkeyData = null;
     [SerializeField] private KeyCode m_Hotkey = KeyCode.Space;
     [SerializeField] private IGameText m_HotkeyText = null;
     [SerializeField] private AbstractActiveGemDisplay m_ActiveGemDisplay = null;
@@ -53,6 +56,11 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
                 {
                     m_PlayerActiveGemContainer = null;
                 }
+                if (m_HotkeyData.ConsistencyCheck())
+                {
+                    HotkeyData hkd = m_HotkeyData.Object;
+                    hkd.PutHotkeyDisplayData(m_Identifier, m_HotKeyDisplayData);
+                }
                 UpdateDisplay();
             }
         }
@@ -61,9 +69,35 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
     #region Methods
     private void OnEnable()
     {
-        //read from hotkeycontext
-        //register to activegemcontainer add / remove from spaceship
 
+        if (m_HotkeyData.ConsistencyCheck())
+        {
+            HotkeyData hkd = m_HotkeyData.Object;
+            HotkeyDisplayData hkDisplayData = hkd.GetHotkeyDisplayData(m_Identifier);
+            if (hkDisplayData!= null)
+            {
+                PlayerActiveGemContainer[] pagcs = PlayerManager.SpaceShip.GetComponentsInChildren<PlayerActiveGemContainer>(false);
+                PlayerActiveGemContainer foundContainer = null;
+                foreach (PlayerActiveGemContainer pagc in pagcs)
+                {
+                    if (pagc.ContainerName.Equals(hkDisplayData.ContainerName))
+                    {
+                        foundContainer = pagc;
+                        break;
+                    }
+                }
+                if (foundContainer != null)
+                {
+                    ActiveGem activeGem = foundContainer.Inventory.Items[hkDisplayData.Slot].Item as ActiveGem;
+                    if (activeGem != null)
+                    {
+                        m_HotKeyDisplayData = hkDisplayData;
+                        m_HotKeyDisplayData.ActiveGem = activeGem;
+                        m_PlayerActiveGemContainer = foundContainer;
+                    }
+                }
+            }
+        }
     }
 
     private void OnDisable()
@@ -123,9 +157,12 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
     private float GetCooldown()
     {
         float cdGlobal = 0.0f;
-        if (m_PlayerActiveGemContainer!=null)
-            cdGlobal = CooldownManager.GetCooldown(m_PlayerActiveGemContainer.EntityStats.Entity);
         float cdGem = 0.0f;
+        if (m_PlayerActiveGemContainer != null)
+        {
+            cdGlobal = CooldownManager.GetCooldown(m_PlayerActiveGemContainer.EntityStats.Entity);
+            cdGem = m_PlayerActiveGemContainer.GetCooldown(m_HotKeyDisplayData.Slot);
+        }
         return Mathf.Max(cdGem, cdGlobal);
     }
 
@@ -154,13 +191,22 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
             int i = 0;
             foreach(ItemStack itemStack in pagc.Inventory.Items)
             {
-                if (itemStack.IsEmpty) continue;
+                if (itemStack.IsEmpty)
+                {
+                    i++;
+                    continue;
+                }
                 ActiveGem activeGem = itemStack.Item as ActiveGem;
-                if (activeGem == null) continue;
+                if (activeGem == null)
+                {
+                    i++;
+                    continue;
+                }
                 HotkeyDisplayData hotkeyDisplayData = new HotkeyDisplayData();
                 hotkeyDisplayData.ActiveGem = activeGem;
                 hotkeyDisplayData.ContainerName = pagc.ContainerName;
                 hotkeyDisplayData.Slot = i;
+                hotkeyDisplayData.Identifier = m_Identifier;
                 displayDatas.Add(hotkeyDisplayData);
                 i++;
             }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8126389915366500636}
   - component: {fileID: 1212965211444020403}
   - component: {fileID: 7743379150074491770}
+  - component: {fileID: 671970134665667057}
   m_Layer: 0
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -99,6 +100,16 @@ MonoBehaviour:
   m_UIHealthBarPrefab: {fileID: 8967638091026044905, guid: 83ccbe4bb65f7ad45a331eafc3c4d289,
     type: 3}
   m_UIHealthBarOffset: {x: 0, y: 1, z: 0}
+  m_UIHealthBarWidth: 1.6
+  m_Entity:
+    m_CanTick: 1
+    m_Description:
+      m_IsPlayer: 0
+      m_Enemy: {fileID: 0}
+      m_EntityType: 0
+      m_IsMinion: 0
+      m_Parent: {fileID: 0}
+    m_StatsChanged: 0
   m_EntityComponent: {fileID: 6037858875201754830}
 --- !u!114 &1212965211444020403
 MonoBehaviour:
@@ -116,7 +127,7 @@ MonoBehaviour:
   m_Attributes:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.movementspeed.flat
+      m_Identifier: core.modtypes.ship.movementspeed.flat
     m_Value: 1
     m_IsCurve: 0
     m_ValueCurve:
@@ -127,7 +138,7 @@ MonoBehaviour:
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.drop.flat
+      m_Identifier: core.modtypes.ship.movementresistance.flat
     m_Value: 1
     m_IsCurve: 0
     m_ValueCurve:
@@ -138,7 +149,18 @@ MonoBehaviour:
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.life.flat
+      m_Identifier: core.modtypes.ship.acceleration.flat
+    m_Value: 1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.life.flat
     m_Value: 100
     m_IsCurve: 0
     m_ValueCurve:
@@ -149,8 +171,8 @@ MonoBehaviour:
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.liferegen.flat
-    m_Value: 50
+      m_Identifier: core.modtypes.ship.liferegen.flat
+    m_Value: 5
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -177,6 +199,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &671970134665667057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134632561253595595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1352607955, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CustomName: 
+  m_MainStateSO: {fileID: 0}
+  m_InitialStateSO: {fileID: 0}
 --- !u!1 &6849510204891436863
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,3 @@ MonoBehaviour:
   - m_Currency:
       m_Identifier: core.currencies.gold
     m_Value: 0
-  - m_Currency:
-      m_Identifier: core.currencies.heart
-    m_Value: 0

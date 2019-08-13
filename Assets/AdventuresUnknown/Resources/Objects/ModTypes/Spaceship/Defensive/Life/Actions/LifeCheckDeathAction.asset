@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 796238176, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: LifeCheckDeathAction
   m_EditorClassIdentifier: 
-  m_Priority: 0
+  m_Priority: 100000
   m_ActionType: {fileID: 11400000, guid: 09198e8f99e09f8458bdd01e02035284, type: 2}
   m_ConditionAction: {fileID: 11400000, guid: a0a7189e5630a81419f00df4f8f4998d, type: 2}
   m_Inverted: 0

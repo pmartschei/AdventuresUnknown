@@ -24,7 +24,6 @@ namespace Assets.AdventuresUnknown.Scripts.Core.EntityStates.Sniper
         private float m_WanderAngle = 0.0f;
         private bool m_AvoidanceLeft = true;
         private float m_AvoidanceTimer = 0.0f;
-        private float m_PerlinNoiseSeed = 0.0f;
         #region Properties
 
         #endregion
@@ -34,7 +33,6 @@ namespace Assets.AdventuresUnknown.Scripts.Core.EntityStates.Sniper
         {
             base.OnEnter();
             m_EntityController = gameObject.GetComponent<EntityController>();
-            m_PerlinNoiseSeed = UnityEngine.Random.Range(0.0f, 1000000000.0f);
             m_WanderAngle = UnityEngine.Random.Range(0.0f, 360.0f);
         }
         public override void Update()
@@ -57,7 +55,7 @@ namespace Assets.AdventuresUnknown.Scripts.Core.EntityStates.Sniper
                 if (Physics.GetIgnoreLayerCollision(this.gameObject.layer, collider.gameObject.layer)) continue;
                 EntityController entityController = collider.gameObject.GetComponentInParent<EntityController>();
                 if (!entityController) continue;
-                if (entityController.SpaceShip.Entity.Description.EntityType != EntityType.SpaceShip) continue;
+                if (entityController.Entity.Description.EntityType != EntityType.SpaceShip) continue;
                 availableTargets.Add(entityController);
             }
             if (availableTargets.Count > 0)
