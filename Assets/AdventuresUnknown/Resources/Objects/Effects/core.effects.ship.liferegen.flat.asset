@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -661867412, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.effects.ship.liferegen.flat
+  m_EditorClassIdentifier: 
+  m_Identifier: core.effects.ship.liferegen.flat
+  m_Overrides: 0
+  m_BasicModBaseIdentifier:
+    m_Identifier: core.modtypes.ship.liferegen.flat
+  m_Icon: {fileID: 21300000, guid: 988e0d86d9ae39f41bf00221b310b71f, type: 3}
+  m_ShowIcon: 1

@@ -52,7 +52,15 @@ namespace AdventuresUnknown.Core.Items
             }
             if (m_LevelText != null)
             {
-                m_LevelText.SetText(item.Level.ToString());
+                m_LevelText.SetText(itemStack.ItemLevel);
+                if (itemStack.ItemLevel > PlayerManager.Level)
+                {
+                    m_LevelText.SetColor(Color.red);
+                }
+                else
+                {
+                    m_LevelText.SetColor(Color.white);
+                }
             }
             if (m_ItemTypeText != null)
             {
@@ -67,7 +75,6 @@ namespace AdventuresUnknown.Core.Items
                 long sum = item.CurrencyValue.Value * itemStack.Amount;
                 m_ValueText.SetText(sum.ToString());
                 m_ValueText.SetCurrency(item.CurrencyValue.Currency.Object);
-                PlayerManager.PlayerWallet.AddValue(item.CurrencyValue.Currency.Identifier, sum);
                 PlayerManager.SetWalletDisplay(item.CurrencyValue.Currency.Identifier);
             }
             return true;

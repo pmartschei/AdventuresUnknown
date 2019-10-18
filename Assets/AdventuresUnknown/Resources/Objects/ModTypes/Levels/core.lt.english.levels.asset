@@ -23,3 +23,11 @@ MonoBehaviour:
     m_String: Entities have
   - m_Identifier: core.mtf.minionshave
     m_String: Minions have
+  - m_Identifier: core.mtf.enemiesdeal
+    m_String: Enemies deal
+  - m_Identifier: core.mtf.playersdeal
+    m_String: Players deal
+  - m_Identifier: core.mtf.entitiesdeal
+    m_String: Entities deal
+  - m_Identifier: core.mtf.minionsdeal
+    m_String: Minions deal

@@ -17,3 +17,9 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.criticaldamage.description
     m_String: Critical Damage
+  - m_Identifier: core.mtf.skills.criticaldamage.gemhotkey.flatpre
+    m_String: Deals
+  - m_Identifier: core.mtf.skills.criticaldamage.flatmain
+    m_String: 0.#%;-0.#%
+  - m_Identifier: core.mtf.skills.criticaldamage.gemhotkey.flatpost
+    m_String: on Critical Strike

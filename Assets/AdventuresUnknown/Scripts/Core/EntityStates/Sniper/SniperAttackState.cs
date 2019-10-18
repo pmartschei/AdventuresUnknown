@@ -1,4 +1,5 @@
-﻿using AdventuresUnknownSDK.Core.Entities.Controllers;
+﻿using AdventuresUnknownSDK.Core.Entities;
+using AdventuresUnknownSDK.Core.Entities.StateMachine.EntityStates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.AdventuresUnknown.Scripts.Core.EntityStates.Sniper
+namespace AdventuresUnknown.Scripts.Core.EntityStates.Sniper
 {
     [CreateAssetMenu]
     public class SniperAttackState : AttackState
@@ -33,58 +34,65 @@ namespace Assets.AdventuresUnknown.Scripts.Core.EntityStates.Sniper
             m_TargetSpriteInstance.SetActive(false);
             m_LineRendererInstance.gameObject.SetActive(false);
             m_LineRendererInstance.positionCount = 2;
+            //Entity entity = CommonComponents.AttackController.GetEntity(SkillIndex);
+            //m_AimingDuration = entity.GetStat("core.modtypes.skills.casttime").Calculated;
+            //m_LockPosition = m_AimingDuration * 0.5f;
+            //m_AttackPosition = m_AimingDuration * 0.75f;
         }
-        public override void Update()
+        protected override void NotNearTarget()
         {
-            base.Update();
-            EnemyController enemyController = EntityController as EnemyController;
-
-            if (!enemyController || enemyController.Target == null) return;
-
-            m_LineRendererInstance.SetPosition(0, gameObject.transform.position);
-            
-            if (!enemyController.IsNearTarget() && m_CurrentAimingDuration <= m_LockPosition)
+            base.NotNearTarget();
+            m_TargetSpriteInstance.SetActive(false);
+            m_LineRendererInstance.gameObject.SetActive(false);
+            m_CurrentAimingDuration = 0.0f;
+        }
+        protected override void TargetAttack()
+        {
+            if (CommonComponents.AttackController.IsNearTarget(SkillIndex) || m_CurrentAimingDuration > m_LockPosition)
             {
-                enemyController.MoveTowardsTarget();
-                enemyController.AimTowardsTarget();
-                m_TargetSpriteInstance.SetActive(false);
-                m_LineRendererInstance.gameObject.SetActive(false);
-                m_CurrentAimingDuration = 0.0f;
+                NearTarget();
             }
-            //if too close (0.3 up to 0.6) move back but try to aim
             else
             {
-                if (!enemyController.HasCooldown() || m_CurrentAimingDuration > 0.0f)
+                NotNearTarget();
+            }
+        }
+        protected override void NearTarget()
+        {
+            if (!CommonComponents.AttackController.HasCooldown(SkillIndex) || m_CurrentAimingDuration > 0.0f)
+            {
+                if (CommonComponents.TranslationalController != null)
+                    CommonComponents.TranslationalController.StopMove();
+                m_LineRendererInstance.SetPosition(0, gameObject.transform.position);
+                m_CurrentAimingDuration += Time.deltaTime;
+
+                if (m_CurrentAimingDuration <= m_LockPosition)
                 {
-                    m_CurrentAimingDuration += Time.deltaTime;
-
-
-                    if (m_CurrentAimingDuration <= m_LockPosition)
-                    {
-                        targetPosition = enemyController.Target.transform.position;
-                    }
-                    
-                    enemyController.AimTowardsPosition(targetPosition);
-
-                    if (m_CurrentAimingDuration >= m_AttackPosition && !enemyController.HasCooldown())
-                    {
-                        m_CurrentAimingDuration = 0.0f;
-                        enemyController.Attack();
-                    }
-                    if (m_CurrentAimingDuration > m_AimingDuration)
-                    {
-                        m_CurrentAimingDuration -= m_AimingDuration;
-                    }
-                    m_TargetSpriteInstance.SetActive(true);
-                    m_LineRendererInstance.gameObject.SetActive(true);
-                    m_TargetSpriteInstance.transform.position = targetPosition;
-                    m_LineRendererInstance.SetPosition(1, targetPosition);
+                    targetPosition = CommonComponents.EntityController.Target.transform.position;
                 }
-                else
+
+                if (CommonComponents.RotationalController.AimTowardsPosition(targetPosition) && m_CurrentAimingDuration >= m_AttackPosition)
                 {
-                    m_TargetSpriteInstance.SetActive(false);
-                    m_LineRendererInstance.gameObject.SetActive(false);
+                    DoAttack();
+                    m_CurrentAimingDuration = 0.0f;
+                    Entity entity = CommonComponents.AttackController.GetEntity(SkillIndex);
+                    m_AimingDuration = entity.GetStat("core.modtypes.skills.casttime").Calculated;
+                    m_LockPosition = m_AimingDuration * 0.5f;
+                    m_AttackPosition = m_AimingDuration * 0.75f;
                 }
+                if (m_CurrentAimingDuration > m_AimingDuration)
+                {
+                    m_CurrentAimingDuration -= m_AimingDuration;
+                }
+                m_TargetSpriteInstance.SetActive(true);
+                m_LineRendererInstance.gameObject.SetActive(true);
+                m_TargetSpriteInstance.transform.position = targetPosition;
+                m_LineRendererInstance.SetPosition(1, targetPosition);
+            }
+            else
+            {
+                m_TargetSpriteInstance.SetActive(false);
+                m_LineRendererInstance.gameObject.SetActive(false);
             }
         }
         public override void OnExit()

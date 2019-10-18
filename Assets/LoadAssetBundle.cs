@@ -15,6 +15,7 @@ using AdventuresUnknownSDK.Core.Log;
 using System.Text;
 using AdventuresUnknown.Core.Utils;
 using AdventuresUnknown.Core.Commands;
+using AdventuresUnknownSDK.Core.Objects.Datas;
 
 public class LoadAssetBundle : MonoBehaviour {
 
@@ -98,13 +99,13 @@ public class LoadAssetBundle : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKey(KeyCode.A))
-        {
-            GameSettingsManager.Language = ObjectsManager.FindObjectByIdentifier<LocalizationLanguage>("core.languages.german");
-        }else if (Input.GetKey(KeyCode.S))
-        {
-            GameSettingsManager.Language = ObjectsManager.FindObjectByIdentifier<LocalizationLanguage>("core.languages.english");
-        }
-	}
+	//void Update () {
+	//	if (Input.GetKey(KeyCode.A))
+ //       {
+ //           GameSettingsManager.Language = ObjectsManager.FindObjectByIdentifier<LocalizationLanguage>("core.languages.german");
+ //       }else if (Input.GetKey(KeyCode.S))
+ //       {
+ //           GameSettingsManager.Language = ObjectsManager.FindObjectByIdentifier<LocalizationLanguage>("core.languages.english");
+ //       }
+	//}
 }

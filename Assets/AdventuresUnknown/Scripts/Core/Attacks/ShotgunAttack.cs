@@ -1,6 +1,9 @@
 ﻿using AdventuresUnknownSDK.Core.Entities;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
+using AdventuresUnknownSDK.Core.Entities.Weapons;
 using AdventuresUnknownSDK.Core.Logic.Attacks;
+using AdventuresUnknownSDK.Core.Objects.Inventories;
+using AdventuresUnknownSDK.Core.Objects.Items;
 using AdventuresUnknownSDK.Core.Objects.Mods.Actions;
 using AdventuresUnknownSDK.Core.Objects.Mods.Actions.ActionObjects;
 using System;
@@ -13,7 +16,7 @@ using UnityEngine;
 
 namespace AdventuresUnknown.Scripts.Core.Attacks
 {
-    public class ShotgunAttack : GenericProjectileAttack
+    public class ShotgunAttack : BasicProjectileAttack
     {
         [SerializeField] private float m_MinimumProjectileSpeedModifier = 0.75f;
         #region Properties
@@ -21,29 +24,26 @@ namespace AdventuresUnknown.Scripts.Core.Attacks
         #endregion
 
         #region Methods
-
-        public override IEnumerator Activate(EntityController controller, Entity spaceShip, Vector3 origin, Vector3 destination)
+        public override void SpawnProjectiles(ActivationParameters activationParameters, Vector3 origin, Vector3 destination, int projectiles, Muzzle muzzle = null)
         {
-            yield return base.Activate(controller, spaceShip, origin, destination);
-            Stat projectiles = spaceShip.GetStat("core.modtypes.skills.projectiles");
+            EntityController controller = activationParameters.EntityController;
+            Entity stats = activationParameters.Stats;
+
             Vector3[] startPositions = GenerateRandomCircularPositions(
                 controller.LookingDestination - controller.transform.position,
                 controller.transform.position,
-                (int)projectiles.Calculated,
+                projectiles,
                 -25.0f, 50.0f);
-            Stat stat = spaceShip.GetStat("core.modtypes.skills.projectilespeed");
+            Stat stat = stats.GetStat("core.modtypes.skills.projectilespeed");
             float maxProjectileSpeed = stat.Calculated;
             float minProjectileSpeed = maxProjectileSpeed * m_MinimumProjectileSpeedModifier;
-            controller.gameObject.GetComponent<Rigidbody>().AddForce(-(controller.LookingDestination-controller.transform.position).normalized * 100.0f);
-            for (int i = 0; i < projectiles.Calculated; i++)
+            for (int i = 0; i < projectiles; i++)
             {
                 stat.RemoveAllStatModifiers();
                 stat.AddStatModifier(new StatModifier(UnityEngine.Random.Range(minProjectileSpeed, maxProjectileSpeed), AdventuresUnknownSDK.Core.Objects.Mods.CalculationType.Flat, this));
-                SpawnSingleInstance(controller, spaceShip, controller.transform.position, startPositions[i]);
+                SpawnSingleInstance(activationParameters, controller.transform.position, startPositions[i]);
             }
-            yield return null;
         }
-        
         #endregion
     }
 }

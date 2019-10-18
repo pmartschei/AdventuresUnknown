@@ -17,3 +17,7 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.icedamage.description
     m_String: Ice Damage
+  - m_Identifier: core.mtf.skills.icedamage.gemhotkey.flatpre
+    m_String: Deals
+  - m_Identifier: core.mtf.skills.icedamage.gemhotkey.flatmain
+    m_String: 0

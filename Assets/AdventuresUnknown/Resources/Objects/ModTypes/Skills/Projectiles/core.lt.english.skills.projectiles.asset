@@ -17,3 +17,9 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.projectiles.description
     m_String: Projectiles
+  - m_Identifier: core.mtf.skills.projectiles.gemhotkey.flatpre
+    m_String: Fires
+  - m_Identifier: core.mtf.skills.projectiles.gemhotkey.flatmain
+    m_String: 0
+  - m_Identifier: core.mtf.skills.projectiles.supportpre
+    m_String: Supported Skills fire

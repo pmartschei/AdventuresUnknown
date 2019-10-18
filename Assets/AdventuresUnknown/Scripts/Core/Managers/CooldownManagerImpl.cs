@@ -16,12 +16,12 @@ namespace Assets.AdventuresUnknown.Core.Managers
         //only redurce the cd of cd1
         [SerializeField] private List<TimerObject> m_Cooldowns = new List<TimerObject>();
         //could be better
-        private void Update()
+        private void FixedUpdate()
         {
-            if (Time.deltaTime <= 0.0f) return;
+            if (Time.fixedDeltaTime <= 0.0f) return;
             for(int i = 0; i < m_Cooldowns.Count; i++)
             {
-                m_Cooldowns[i].Update(Time.deltaTime);
+                m_Cooldowns[i].Update(Time.fixedDeltaTime);
                 if (m_Cooldowns[i].IsFinished())
                 {
                     m_Cooldowns.RemoveAt(i);

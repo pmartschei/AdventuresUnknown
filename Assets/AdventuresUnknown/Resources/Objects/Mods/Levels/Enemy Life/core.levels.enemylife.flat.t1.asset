@@ -17,10 +17,11 @@ MonoBehaviour:
   m_ModBaseIdentifier:
     m_Identifier: core.modtypes.levels.enemylife.flat
   m_Domain: 2
+  m_ModGroups: []
   m_Tier: 1
   m_RequiredLevel: 0
   m_MinValue: 10
-  m_MaxValue: 50
+  m_MaxValue: 20
   m_Round: 1
   m_WeightedTagList:
     m_WeightedTags:

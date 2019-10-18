@@ -16,6 +16,6 @@ MonoBehaviour:
   m_Overrides: 0
   m_ShipName: 
   m_Level: 1
-  m_Experience: 0
+  m_Experience: 1001
   m_PlayTime: 0
-  m_GameMode: core.gamemodes.journey
+  m_GameMode: 

@@ -24,6 +24,7 @@ TagManager:
   - team7
   - 
   - 
+  - Drop
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - NavCollider
   m_SortingLayers:
   - name: Background
     uniqueID: 2723341917

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.levelprefix.english
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.levelprefix.dream
+    m_String: Dream
+  - m_Identifier: core.levelprefix.ark
+    m_String: Ark
+  - m_Identifier: core.levelprefix.prodigy
+    m_String: Prodigy
+  - m_Identifier: core.levelprefix.arcadis
+    m_String: Arcadis
+  - m_Identifier: core.levelprefix.mystery
+    m_String: Mystery
+  - m_Identifier: core.levelprefix.spire
+    m_String: Spire
+  - m_Identifier: core.levelprefix.architect
+    m_String: Architect
+  - m_Identifier: core.levelprefix.aurora
+    m_String: Aurora
+  - m_Identifier: core.levelprefix.revelation
+    m_String: Revelation
+  - m_Identifier: core.levelprefix.luna
+    m_String: Luna
+  - m_Identifier: core.levelprefix.virtue
+    m_String: Virtue
+  - m_Identifier: core.levelprefix.century
+    m_String: Century
+  - m_Identifier: core.levelprefix.phantasm
+    m_String: Phantasm
+  - m_Identifier: core.levelprefix.serenity
+    m_String: Serenity
+  - m_Identifier: core.levelprefix.proto
+    m_String: Proto

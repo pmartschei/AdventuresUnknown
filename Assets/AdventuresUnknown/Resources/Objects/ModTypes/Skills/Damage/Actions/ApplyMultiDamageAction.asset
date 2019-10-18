@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1516807167, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: ApplyMultiDamageAction
+  m_EditorClassIdentifier: 
+  m_Priority: -100000
+  m_ActionType: {fileID: 11400000, guid: c0a1d120876f35b4b8ab795b05c503a2, type: 2}
+  m_Actions:
+  - {fileID: 11400000, guid: 92fc4863a4d890f43a358612d422ba01, type: 2}
+  - {fileID: 11400000, guid: a5bea8c703f246c46b5e06f849411361, type: 2}
+  - {fileID: 11400000, guid: 943b2be97daaf6942889eb575f978ef0, type: 2}

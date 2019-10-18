@@ -22,11 +22,13 @@ using UnityEngine.Events;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
 using AdventuresUnknownSDK.Core.Objects.Currencies;
 using AdventuresUnknownSDK.Core.Objects.GameModes;
+using AdventuresUnknownSDK.Core.Log;
 
 namespace Assets.AdventuresUnknown.Core.Managers
 {
     public class PlayerManagerImpl : PlayerManager
     {
+        [SerializeField] private ContextDataIdentifier m_ContextData = null;
         [SerializeField] private EntityBehaviour m_PlayerSpaceShip = null;
         [SerializeField] private EntityController m_PlayerController = null;
         [SerializeField] private Wallet m_PlayerWallet = null;
@@ -48,6 +50,8 @@ namespace Assets.AdventuresUnknown.Core.Managers
         protected override UnityEvent OnWalletDisplayChangeImpl => m_OnWalletDisplayChangeEvent;
         protected override Currency[] WalletDisplayImpl => m_WalletDisplay;
 
+        protected override int LevelImpl => m_ContextData.Object.Level;
+
         #endregion
 
         #region Methods
@@ -59,8 +63,15 @@ namespace Assets.AdventuresUnknown.Core.Managers
         }
         public void Init()
         {
+            if (!m_ContextData.ConsistencyCheck())
+            {
+                GameConsole.LogErrorFormat("PlayerManager: ContextData is null - {0}",m_ContextData.Identifier);
+            }
         }
-
+        private void Update()
+        {
+            m_ContextData.Object.PlayTime += Time.unscaledDeltaTime;
+        }
         protected FileObject LoadFileObject(string file)
         {
             if (!File.Exists(CompleteSavePath + file)) return null;

@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2037944020, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.enemies.swarmqueen
+  m_EditorClassIdentifier: 
+  m_Identifier: core.enemies.swarmqueen
+  m_Overrides: 0
+  m_EnemyName:
+    m_LocalizedIdentifier: core.enemies.swarmqueen.name
+  m_TagList:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.enemies.passive
+    - m_Identifier: core.tags.enemies.slow
+    - m_Identifier: core.tags.enemies.tanky
+    - m_Identifier: core.tags.enemies.spawner
+  m_Attributes:
+  - m_InspectorElementName: core.modtypes.ship.life.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.life.flat
+    m_Value: 1000
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.movementspeed.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.movementspeed.flat
+    m_Value: 1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.acceleration.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.acceleration.flat
+    m_Value: 0.5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.minion_count.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.minion_count.flat
+    m_Value: 15
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.gold.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.gold.flat
+    m_Value: 30
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.experience.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.experience.flat
+    m_Value: 30
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.drop.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.drop.flat
+    m_Value: 1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  m_IsSpawnable: 0
+  m_Difficulty: 6
+  m_Model: {fileID: 3766128934561450785, guid: 0558e779ddfaa2f4397cafcdb032d527, type: 3}
+  m_ActiveGemCollection: {fileID: 11400000, guid: b0e8f7e383abf14479a0bdb1645616bb,
+    type: 2}

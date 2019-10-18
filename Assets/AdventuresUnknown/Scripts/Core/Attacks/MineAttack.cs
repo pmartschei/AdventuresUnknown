@@ -1,7 +1,10 @@
 ﻿using AdventuresUnknownSDK.Core.Entities;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
+using AdventuresUnknownSDK.Core.Entities.Weapons;
 using AdventuresUnknownSDK.Core.Logic.Attacks;
 using AdventuresUnknownSDK.Core.Managers;
+using AdventuresUnknownSDK.Core.Objects.Inventories;
+using AdventuresUnknownSDK.Core.Objects.Items;
 using AdventuresUnknownSDK.Core.Objects.Mods.Actions.ActionObjects;
 using System;
 using System.Collections;
@@ -15,27 +18,24 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Attacks
 {
     public class MineAttack : GenericAttack
     {
-        [SerializeField] private GenericAttack m_AttackOnCollisionOrDuration = null;
-
         #region Properties
 
         #endregion
 
         #region Methods
-        public override IEnumerator Activate(EntityController controller, Entity stats, Vector3 origin, Vector3 destination)
+        public override IEnumerator Activate(ActivationParameters activationParameters)
         {
-            yield return base.Activate(controller, stats, origin, destination);
-            SpawnSingleInstance(controller, stats, origin, destination);
-        }
-        protected override void AttackUpdate()
-        {
-
+            PreActivate(activationParameters);
+            EntityController controller = activationParameters.EntityController;
+            Vector3 destination = controller.LookingDestination;
+            Vector3 origin = controller.Head.position;
+            SpawnSingleInstance(activationParameters, origin, destination);
+            yield return null;
         }
         protected override void DestroyAttack()
         {
             base.DestroyAttack();
-            Entity.Notify(ActionTypeManager.AttackGeneration);
-            ExecuteCoroutine(m_AttackOnCollisionOrDuration.Activate(this, Entity, this.transform.position, this.LookingDestination));
+            ActivateSecondaryActiveGem(0);
         }
         protected override void OnAttackHit(HitContext hitContext)
         {

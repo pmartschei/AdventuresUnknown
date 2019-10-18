@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2037944020, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.enemies.swarmling
+  m_EditorClassIdentifier: 
+  m_Identifier: core.enemies.swarmling
+  m_Overrides: 0
+  m_EnemyName:
+    m_LocalizedIdentifier: core.enemies.swarmling.name
+  m_TagList:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.enemies.active
+    - m_Identifier: core.tags.enemies.fast
+    - m_Identifier: core.tags.enemies.ranged
+    - m_Identifier: core.tags.enemies.squishy
+  m_Attributes:
+  - m_InspectorElementName: core.modtypes.ship.life.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.life.flat
+    m_Value: 20
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.movementspeed.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.movementspeed.flat
+    m_Value: 10
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.acceleration.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.acceleration.flat
+    m_Value: 8
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  m_IsSpawnable: 0
+  m_Difficulty: 10
+  m_Model: {fileID: 3766128934561450785, guid: c259739539d231442830bf2707d4dc9b, type: 3}
+  m_ActiveGemCollection: {fileID: 11400000, guid: f5753a0e346ce4d4dad281455faa2fec,
+    type: 2}

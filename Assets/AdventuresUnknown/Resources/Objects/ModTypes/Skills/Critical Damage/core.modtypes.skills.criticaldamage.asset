@@ -17,10 +17,14 @@ MonoBehaviour:
   m_Priority: 0
   m_RoundDown: 0
   m_AlwaysTakeMax: 1
+  m_CanGetHigherThanCalculated: 0
   m_MinValue: 0
   m_MaxValue: 3.4028235e+38
+  m_IsVisible: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_ModTypeFormatters:
   - {fileID: 11400000, guid: be93c1eb474cc0f4d8d52e7fbd250e76, type: 2}
+  - {fileID: 11400000, guid: 35e668be4751b664ba3bf4f04688c988, type: 2}
+  - {fileID: 11400000, guid: 704bcd59ea0a0904c9eb631e32c3f787, type: 2}
   m_ModActionCollection: {fileID: 11400000, guid: 7195399788b0ed647848af1a5e2baf0b,
     type: 2}

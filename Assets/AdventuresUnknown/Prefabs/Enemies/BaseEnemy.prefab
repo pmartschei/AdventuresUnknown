@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1212965211444020403}
   - component: {fileID: 7743379150074491770}
   - component: {fileID: 671970134665667057}
+  - component: {fileID: 8845520486883923194}
   m_Layer: 0
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -34,8 +35,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8808866088278554010}
   - {fileID: 1373441245933514028}
+  - {fileID: 8808866088278554010}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54,6 +55,7 @@ MonoBehaviour:
   m_EnemyActiveGemContainer: {fileID: 6777303432594508268}
   m_EntityBehaviour: {fileID: 6037858875201754830}
   m_EntityController: {fileID: 8126389915366500636}
+  m_BaseEntityStats: {fileID: 1212965211444020403}
 --- !u!54 &8405969024044130226
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67,7 +69,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &6777303432594508268
@@ -97,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: -687883006, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Head: {fileID: 2773079484713623658}
   m_UIHealthBarPrefab: {fileID: 8967638091026044905, guid: 83ccbe4bb65f7ad45a331eafc3c4d289,
     type: 3}
-  m_UIHealthBarOffset: {x: 0, y: 1, z: 0}
+  m_UIHealthBarOffset: {x: 0, y: 0, z: 0.75}
   m_UIHealthBarWidth: 1.6
   m_Entity:
     m_CanTick: 1
@@ -108,9 +111,12 @@ MonoBehaviour:
       m_Enemy: {fileID: 0}
       m_EntityType: 0
       m_IsMinion: 0
+      m_MinionCountModType: 
       m_Parent: {fileID: 0}
     m_StatsChanged: 0
   m_EntityComponent: {fileID: 6037858875201754830}
+  m_NavMeshAgent: {fileID: 8845520486883923194}
+  m_Muzzles: []
 --- !u!114 &1212965211444020403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,62 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Entity: {fileID: 6037858875201754830}
-  m_Attributes:
-  - m_InspectorElementName: 
-    m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.movementspeed.flat
-    m_Value: 1
-    m_IsCurve: 0
-    m_ValueCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-  - m_InspectorElementName: 
-    m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.movementresistance.flat
-    m_Value: 1
-    m_IsCurve: 0
-    m_ValueCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-  - m_InspectorElementName: 
-    m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.acceleration.flat
-    m_Value: 1
-    m_IsCurve: 0
-    m_ValueCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-  - m_InspectorElementName: 
-    m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.life.flat
-    m_Value: 100
-    m_IsCurve: 0
-    m_ValueCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-  - m_InspectorElementName: 
-    m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.liferegen.flat
-    m_Value: 5
-    m_IsCurve: 0
-    m_ValueCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
+  m_Attributes: []
 --- !u!95 &7743379150074491770
 Animator:
   serializedVersion: 3
@@ -190,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 3134632561253595595}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb66a2c40d859144fa9488b5e7ce625a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -211,9 +162,31 @@ MonoBehaviour:
   m_Script: {fileID: 1352607955, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CustomName: 
+  m_CustomName: esm_empty
   m_MainStateSO: {fileID: 0}
   m_InitialStateSO: {fileID: 0}
+--- !u!195 &8845520486883923194
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134632561253595595}
+  m_Enabled: 1
+  m_AgentTypeID: 1479372276
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 0.5
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &6849510204891436863
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2773079484713623658}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6037858875201754830
 MonoBehaviour:
@@ -264,8 +237,10 @@ MonoBehaviour:
       m_Enemy: {fileID: 0}
       m_EntityType: 0
       m_IsMinion: 0
+      m_MinionCountModType: 
       m_Parent: {fileID: 0}
     m_StatsChanged: 0
+  m_EntityController: {fileID: 8126389915366500636}
 --- !u!1 &7825827862481308741
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,8 +250,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8808866088278554010}
-  - component: {fileID: 8467952373707238770}
-  - component: {fileID: 5083173369890436337}
+  - component: {fileID: 1123824170574813631}
+  - component: {fileID: 6727752346886843786}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -291,23 +266,31 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7825827862481308741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 0.7500019, z: 1}
   m_Children: []
   m_Father: {fileID: 2773079484713623658}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8467952373707238770
-SpriteRenderer:
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &1123824170574813631
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825827862481308741}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6727752346886843786
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7825827862481308741}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -315,7 +298,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 47ace96fd88244a4fb88d874caafa593, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,35 +310,11 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1207044951
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b0f8942ca469a740b4d436e2134ca6a, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 15.84, y: 10.97}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!65 &5083173369890436337
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7825827862481308741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15, y: 11, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}

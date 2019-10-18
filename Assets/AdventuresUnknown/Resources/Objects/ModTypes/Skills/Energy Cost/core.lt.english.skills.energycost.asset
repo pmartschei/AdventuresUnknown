@@ -17,3 +17,11 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.energycost.description
     m_String: Energy Cost
+  - m_Identifier: core.mtf.skills.energycost.gemhotkey.flatpre
+    m_String: Uses
+  - m_Identifier: core.mtf.skills.energycost.gemhotkey.flatmain
+    m_String: 0
+  - m_Identifier: core.mtf.skills.energycost.gemhotkey.flatpost
+    m_String: Energy
+  - m_Identifier: core.mtf.skills.energycost.gemhotkey.supportpre
+    m_String: Supported Skills have

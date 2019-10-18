@@ -17,3 +17,7 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.lightningdamage.description
     m_String: Lightning Damage
+  - m_Identifier: core.mtf.skills.lightningdamage.gemhotkey.flatpre
+    m_String: Deals
+  - m_Identifier: core.mtf.skills.lightningdamage.gemhotkey.flatmain
+    m_String: 0

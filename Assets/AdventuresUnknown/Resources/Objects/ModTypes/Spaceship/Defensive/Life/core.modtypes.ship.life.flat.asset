@@ -17,5 +17,4 @@ MonoBehaviour:
   m_ModTypeIdentifier:
     m_Identifier: core.modtypes.ship.life
   m_CalculationType: 0
-  m_ModGroups:
-  - 
+  m_ModGroups: []

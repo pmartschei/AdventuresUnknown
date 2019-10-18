@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: core.modtypes.skills.energycost.actions
   m_EditorClassIdentifier: 
   m_BaseActions:
-  - {fileID: 11400000, guid: ad404978e0b609f418386383c65c9904, type: 2}
+  - {fileID: 11400000, guid: 79e558505ff3ba840b2f470a9139483a, type: 2}
+  - {fileID: 11400000, guid: 98db76b450b5fe846adc7296508ef76e, type: 2}

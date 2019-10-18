@@ -71,7 +71,14 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
 
             if (m_ModActionDictionary.TryGetValue(actionValue, out allBaseActions))
             {
-                filteredBaseActions.AddRange(allBaseActions.FindAll((baseAction) => { return modTypes.Contains(baseAction.ModType); }));
+                if (modTypes == null)
+                {
+                    filteredBaseActions.AddRange(allBaseActions);
+                }
+                else
+                {
+                    filteredBaseActions.AddRange(allBaseActions.FindAll((baseAction) => { return modTypes.Contains(baseAction.ModType); }));
+                }
             }
 
             return filteredBaseActions;

@@ -45,7 +45,7 @@ namespace AdventuresUnknown.Core.Commands
                     amount = item.DefaultAmount;
                 }
             }
-            string inventoryIdentifier = "core.inventories.equipment";
+            string inventoryIdentifier = "core.inventories.inventory";
             if (parameters.Length >= 3)
             {
                 inventoryIdentifier = parameters[2];

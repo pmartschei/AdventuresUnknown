@@ -21,6 +21,8 @@ using AdventuresUnknownSDK.Core.Objects.Tags;
 using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Levels;
 using AdventuresUnknownSDK.Core.Objects.Mods.Actions;
+using AdventuresUnknownSDK.Core.Objects.Effects;
+using AdventuresUnknownSDK.Core.Objects.Experience;
 
 namespace AdventuresUnknown.Core.Managers
 {
@@ -59,6 +61,9 @@ namespace AdventuresUnknown.Core.Managers
             LoadCoreObjects<Wallet>();
             LoadCoreObjects<Enemy>();
             LoadCoreObjects<IPlayerData>();
+            LoadCoreObjects<ActiveGemCollection>();
+            LoadCoreObjects<Effect>();
+            LoadCoreObjects<ExperienceController>();
         }
 
         public void Load<T>(T[] objects) where T : CoreObject
@@ -103,7 +108,14 @@ namespace AdventuresUnknown.Core.Managers
 
             foreach(T loadedObject in objectsAdded)
             {
-                loadedObject.Initialize();
+                try
+                {
+                    loadedObject.Initialize();
+                }
+                catch (Exception ex)
+                {
+                    GameConsole.LogErrorFormat("Could not Initialize() on Object {0} \n Exception {1}", loadedObject,ex);
+                }
             }
             int count = hashtable.Count - startingCount;
             GameConsole.LogFormat("Loaded {0} {1}.", count, typeof(T).Name);

@@ -16,4 +16,4 @@ MonoBehaviour:
   m_ActionType: {fileID: 11400000, guid: 09198e8f99e09f8458bdd01e02035284, type: 2}
   m_ConditionAction: {fileID: 11400000, guid: a0a7189e5630a81419f00df4f8f4998d, type: 2}
   m_Inverted: 0
-  m_FollowAction: {fileID: 11400000, guid: 4f38182b1afa34f4e96367784d34f68c, type: 2}
+  m_FollowAction: {fileID: 11400000, guid: d7a9b4a2c698b534bb348ee2d383ab2e, type: 2}

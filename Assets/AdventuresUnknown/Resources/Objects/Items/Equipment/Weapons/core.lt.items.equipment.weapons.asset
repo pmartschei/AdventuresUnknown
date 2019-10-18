@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.items.equipment.weapons
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.items.equipment.critchanceweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.critchanceweapon1.name
+    m_String: Crit Chance Weapon T1
+  - m_Identifier: core.items.equipment.critchanceweapon2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.critchanceweapon2.name
+    m_String: Crit Chance  Weapon T2
+  - m_Identifier: core.items.equipment.critdamageweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.critdamageweapon1.name
+    m_String: Crit Damage Weapon T1
+  - m_Identifier: core.items.equipment.critdamageweapon2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.critdamageweapon2.name
+    m_String: Crit Damage Weapon T2
+  - m_Identifier: core.items.equipment.fireweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.fireweapon1.name
+    m_String: Fire Weapon T1
+  - m_Identifier: core.items.equipment.fireweapon2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.fireweapon2.name
+    m_String: Fire Weapon T2
+  - m_Identifier: core.items.equipment.fireweapon3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.fireweapon3.name
+    m_String: Fire Weapon T3
+  - m_Identifier: core.items.equipment.iceweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.iceweapon1.name
+    m_String: Ice Weapon T1
+  - m_Identifier: core.items.equipment.iceweapon2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.iceweapon2.name
+    m_String: Ice Weapon T2
+  - m_Identifier: core.items.equipment.iceweapon3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.iceweapon3.name
+    m_String: Ice Weapon T3
+  - m_Identifier: core.items.equipment.lightningweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lightningweapon1.name
+    m_String: Lightning Weapon T1
+  - m_Identifier: core.items.equipment.lightningweapon2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lightningweapon2.name
+    m_String: Lightning Weapon T2
+  - m_Identifier: core.items.equipment.lightningweapon3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lightningweapon3.name
+    m_String: Lightning Weapon T3
+  - m_Identifier: core.items.equipment.pierceweapon1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.pierceweapon1.name
+    m_String: Pierce Weapon T1

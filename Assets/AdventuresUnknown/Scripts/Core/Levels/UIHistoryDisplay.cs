@@ -36,7 +36,7 @@ namespace AdventuresUnknown.Scripts.Core.Levels
         public void Display(CompletedLevel completedLevel)
         {
             m_Level = LevelManager.GenerateFromCompletedLevel(completedLevel);
-
+            m_Level.EnemyLevel = completedLevel.EnemyLevel;
             DisplayLevel(m_Level);
         }
 

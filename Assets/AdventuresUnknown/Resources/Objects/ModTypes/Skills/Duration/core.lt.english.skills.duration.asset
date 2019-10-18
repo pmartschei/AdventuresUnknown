@@ -17,3 +17,7 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.duration.description
     m_String: Skill Duration
+  - m_Identifier: core.mtf.skills.duration.gemhotkey.flatpre
+    m_String: 'Skill Duration:'
+  - m_Identifier: core.mtf.skills.duration.gemhotkey.flatmain
+    m_String: 0.00s

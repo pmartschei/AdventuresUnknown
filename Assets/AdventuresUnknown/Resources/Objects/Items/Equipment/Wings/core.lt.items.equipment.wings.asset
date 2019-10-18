@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.items.equipment.wings
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.items.equipment.casttimewing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.casttimewing1.name
+    m_String: Cast Time Wing T1
+  - m_Identifier: core.items.equipment.casttimewing2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.casttimewing2.name
+    m_String: Cast Time Wing T2
+  - m_Identifier: core.items.equipment.cooldownwing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.cooldownwing1.name
+    m_String: Attack Speed Wing T1
+  - m_Identifier: core.items.equipment.cooldownwing2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.cooldownwing2.name
+    m_String: Attack Speed Wing T2
+  - m_Identifier: core.items.equipment.energycostwing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.energycostwing1.name
+    m_String: Energy Cost Wing T1
+  - m_Identifier: core.items.equipment.projectilespeedwing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.projectilespeedwing1.name
+    m_String: Projectile Speed Wing T1
+  - m_Identifier: core.items.equipment.projectilespeedwing2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.projectilespeedwing2.name
+    m_String: Projectile Speed Wing T2
+  - m_Identifier: core.items.equipment.lifewing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifewing1.name
+    m_String: Life Wing T1
+  - m_Identifier: core.items.equipment.lifewing2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifewing2.name
+    m_String: Life Wing T2
+  - m_Identifier: core.items.equipment.lifewing3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifewing3.name
+    m_String: Life Wing T3
+  - m_Identifier: core.items.equipment.piercewing1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.piercewing1.name
+    m_String: Pierce Wing T1
+  - m_Identifier: core.items.equipment.piercewing2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.piercewing2.name
+    m_String: Pierce Wing T2

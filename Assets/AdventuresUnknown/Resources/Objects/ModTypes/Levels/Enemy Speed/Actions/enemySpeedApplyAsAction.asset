@@ -15,4 +15,5 @@ MonoBehaviour:
   m_Priority: 0
   m_ActionType: {fileID: 0}
   m_Target:
-    m_Identifier: core.modtypes.movementspeed
+    m_Identifier: core.modtypes.ship.movementspeed
+  m_KeepPercentage: 1

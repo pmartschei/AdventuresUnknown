@@ -97,21 +97,21 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 1.4
-    agentHeight: 2
+    agentRadius: 0.5
+    agentHeight: 0.5
     agentSlope: 45
-    agentClimb: 1
+    agentClimb: 0.25
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 1
-    cellSize: 0.175
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 31333d3b65183d84ab913ce562d9b0ae, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &12615352
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +184,9 @@ GameObject:
   - component: {fileID: 88651310}
   - component: {fileID: 88651311}
   - component: {fileID: 88651312}
+  - component: {fileID: 88651313}
+  - component: {fileID: 88651314}
+  - component: {fileID: 88651315}
   m_Layer: 0
   m_Name: Singletons
   m_TagString: Untagged
@@ -289,6 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1891b8f68b9a38d4680ffee64bba1938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ContextData:
+    m_Identifier: core.datas.context
   m_PlayerSpaceShip: {fileID: 1534360556}
   m_PlayerController: {fileID: 0}
   m_PlayerWallet: {fileID: 11400000, guid: 1f6c3edccbdb84e499cb31d0c7b48ccd, type: 2}
@@ -359,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LevelGeneratorDescription: {fileID: 11400000, guid: 4469dbd1a0d65d643b13f91a5c64dfc6,
     type: 2}
+  m_SpawnLayer: 10
 --- !u!114 &88651308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c80566c43cc5e4e984564c1dc20784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ModifyInvoker: {fileID: 11400000, guid: d93d9943534d964439c94687cb5591b0, type: 2}
 --- !u!114 &88651309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AllDropRate:
     m_DropTable: {fileID: 11400000, guid: bef0c657f24c2dd4ca7ef6c7d76ba57c, type: 2}
-    m_Rate: 1
+    m_Rate: 0.1
     m_Count: 1
   m_DropPrefab: {fileID: 3079353211641586940, guid: 0f7c041ce8e43614690913a1e1400ea9,
     type: 3}
@@ -417,6 +424,7 @@ MonoBehaviour:
     type: 2}
   m_TickAction: {fileID: 11400000, guid: 09198e8f99e09f8458bdd01e02035284, type: 2}
   m_DeathAction: {fileID: 11400000, guid: d5ee8bf84f649fc4c8f5b9678554f130, type: 2}
+  m_PostDeathAction: {fileID: 11400000, guid: e10e31850a10eb34ab576977ba179b11, type: 2}
   m_SpawnAction: {fileID: 11400000, guid: 822894a7ce4876842ac6360ea303f4d4, type: 2}
   m_BlockAction: {fileID: 11400000, guid: 0fbbadce73f90da438c48a0fae8fcb59, type: 2}
   m_HitGenerationOffensiveAction: {fileID: 11400000, guid: 50b7c485fc9816545b50d3b0c21e86a5,
@@ -429,6 +437,8 @@ MonoBehaviour:
   m_AttackCooldownGenerationAction: {fileID: 11400000, guid: cbeb23d4ee3b0eb4e98eb347f7dfedc2,
     type: 2}
   m_AttackCooldownApplyAction: {fileID: 11400000, guid: d2508717c7eda8d4084d5d644ce79be2,
+    type: 2}
+  m_AttackApplyAction: {fileID: 11400000, guid: c0a1d120876f35b4b8ab795b05c503a2,
     type: 2}
   m_AttackGenerationAction: {fileID: 11400000, guid: e486667adf61da64aa5e7a931c3e6672,
     type: 2}
@@ -444,7 +454,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebaae9533b94e84d84d27196fb2b227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Block: {fileID: 0}
+  m_Block: {fileID: 11400000, guid: 2f272c80027c0ef45a172e9b1a8ec7e6, type: 2}
+--- !u!114 &88651313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88651295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b34154f897397a43bcab9da3ebc39b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverlayTransform: {fileID: 1664472283}
+  m_MissingItemDisplay: {fileID: 1271211808191344838, guid: d718382cb1b1a2d449e282ff035e33c5,
+    type: 3}
+  m_HealthBarTransform: {fileID: 0}
+  m_ItemDropTransform: {fileID: 0}
+  m_EntityTransform: {fileID: 0}
+  m_AttacksTransform: {fileID: 0}
+--- !u!114 &88651314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88651295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54be54a9ab9d753469b0bc3204a35e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExperienceController: {fileID: 11400000, guid: 5ba9e690fed59274c9beaca6d8af1c12,
+    type: 2}
+--- !u!114 &88651315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88651295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43ecddd90a2a6541a3c6ba99b769be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_WallPrefab: {fileID: 4412264063280609815, guid: df3d9f7022521d84f952cfbca920723c,
+    type: 3}
+--- !u!1 &463563062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463563063}
+  - component: {fileID: 463563064}
+  m_Layer: 9
+  m_Name: PlayerActiveGemContainer3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &463563063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463563062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1534360557}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463563064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463563062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -416360798, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ContainerName: core.inventories.gemsleft
+  m_ActiveStats: []
+  m_Inventory:
+    m_Identifier: core.inventories.gemsleft
 --- !u!224 &688096979 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7829222017857879083, guid: 31845865167bc034eac4649a08a28c16,
@@ -463,7 +567,7 @@ GameObject:
   - component: {fileID: 843504229}
   - component: {fileID: 843504231}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Initializer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,16 +609,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 843504228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b34154f897397a43bcab9da3ebc39b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 571e418e2b8324c439daa45a7ee47d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverlayTransform: {fileID: 1664472283}
-  m_MissingItemDisplay: {fileID: 1271211808191344838, guid: d718382cb1b1a2d449e282ff035e33c5,
-    type: 3}
-  m_HealthBarTransform: {fileID: 0}
-  m_ItemDropTransform: {fileID: 0}
-  m_EntityTransform: {fileID: 0}
-  m_AttacksTransform: {fileID: 0}
+  m_Equipment:
+    m_Identifier: core.inventories.equipment
+  m_ContextData:
+    m_Identifier: core.datas.context
+  m_LevelMod:
+    m_Identifier: core.modtypes.utility.level
+  m_StartingScene: core.scenes.title
+--- !u!1 &1010499427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010499429}
+  - component: {fileID: 1010499428}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010499428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010499427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df726234c4767347a36ba315e324e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1010499429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010499427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378783742
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +689,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378783742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 900852432, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -618,8 +765,10 @@ MonoBehaviour:
       m_Enemy: {fileID: 0}
       m_EntityType: 0
       m_IsMinion: 0
+      m_MinionCountModType: 
       m_Parent: {fileID: 0}
     m_StatsChanged: 0
+  m_EntityController: {fileID: 0}
 --- !u!4 &1534360557
 Transform:
   m_ObjectHideFlags: 0
@@ -632,6 +781,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 12615353}
+  - {fileID: 1765519231}
+  - {fileID: 463563063}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -664,45 +815,117 @@ MonoBehaviour:
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.life.flat
     m_Value: 100
-    m_IsCurve: 0
+    m_IsCurve: 1
     m_ValueCurve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 100
+        inSlope: 1
+        outSlope: 24
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 2476
+        inSlope: 24
+        outSlope: 0
+        tangentMode: 5
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.energy.flat
     m_Value: 100
-    m_IsCurve: 0
+    m_IsCurve: 1
     m_ValueCurve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 100
+        inSlope: 1
+        outSlope: 5
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 595
+        inSlope: 5
+        outSlope: 0
+        tangentMode: 5
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.energyregen.flat
-    m_Value: 25
-    m_IsCurve: 0
+    m_Value: 3
+    m_IsCurve: 1
     m_ValueCurve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 3
+        inSlope: 1
+        outSlope: 0.049999997
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 7.95
+        inSlope: 0.049999997
+        outSlope: 0
+        tangentMode: 5
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.liferegen.flat
-    m_Value: 25
-    m_IsCurve: 0
+    m_Value: 1
+    m_IsCurve: 1
     m_ValueCurve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0.25
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 25.75
+        inSlope: 0.25
+        outSlope: 0
+        tangentMode: 5
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
@@ -717,8 +940,41 @@ MonoBehaviour:
       m_RotationOrder: 0
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
-      m_Identifier: core.modtypes.ship.fireresistance.flat
-    m_Value: 0.8
+      m_Identifier: core.modtypes.ship.maxfireresistance.flat
+    m_Value: 0.75
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.maxiceresistance.flat
+    m_Value: 0.75
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.maxlightningresistance.flat
+    m_Value: 0.75
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.criticaldamage.flat
+    m_Value: 0.5
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -825,6 +1081,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1765519230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765519231}
+  - component: {fileID: 1765519232}
+  m_Layer: 9
+  m_Name: PlayerActiveGemContainer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765519231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765519230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1534360557}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1765519232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765519230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -416360798, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ContainerName: core.inventories.gemsright
+  m_ActiveStats: []
+  m_Inventory:
+    m_Identifier: core.inventories.gemsright
 --- !u!1001 &7829222017203600120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -990,7 +1293,7 @@ PrefabInstance:
     - target: {fileID: 7829222018079078008, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1024.7803
+      value: -1024.7799
       objectReference: {fileID: 0}
     - target: {fileID: 7829222018544442298, guid: 31845865167bc034eac4649a08a28c16,
         type: 3}

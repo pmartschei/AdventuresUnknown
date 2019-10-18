@@ -17,3 +17,7 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.firedamage.description
     m_String: Fire Damage
+  - m_Identifier: core.mtf.skills.firedamage.gemhotkey.flatpre
+    m_String: Deals
+  - m_Identifier: core.mtf.skills.firedamage.gemhotkey.flatmain
+    m_String: 0

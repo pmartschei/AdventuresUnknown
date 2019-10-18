@@ -20,35 +20,46 @@ MonoBehaviour:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 1
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
-      m_Identifier: 
+      m_Identifier: core.items.equipment.energyregenshield1
     m_PowerLevel: 0
     m_Amount: 1
+    m_ItemLevel: 1
+    m_ImplicitMods:
+    - m_Value: 3
+      m_ModIdentifier:
+        m_Identifier: core.modtypes.ship.energyregen.flat.implicits.t1
+      m_BasicModBaseIdentifier:
+        m_Identifier: core.modtypes.ship.energyregen.flat
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: 
+    m_PowerLevel: 0
+    m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []

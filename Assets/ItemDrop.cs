@@ -24,20 +24,20 @@ public class ItemDrop : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,
         m_RectTransform = GetComponent<RectTransform>();
     }
 
-    public void Collect(Inventory inventory)
+    public bool Collect(Inventory inventory)
     {
-        if (inventory == null) return;
+        if (inventory == null) return false;
         if (inventory.AddItemStack(m_ItemStack))
         {
             Destroy(gameObject);
             OnPointerExit(null);
             PlayerManager.Save();
-            return;
+            return true;
         }
-        if (!m_Display) return;
-        m_Display.Display(ItemStack);
+        return false;
+        //if (!m_Display) return;
+        //m_Display.Display(ItemStack);
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         if (m_Display)
@@ -45,7 +45,6 @@ public class ItemDrop : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,
             Destroy(m_Display.gameObject);
         }
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         m_Display = Instantiate(ItemStack.Item.ItemStackDisplay, this.transform.root);

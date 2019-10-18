@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2037944020, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.enemies.icynovastriker
+  m_EditorClassIdentifier: 
+  m_Identifier: core.enemies.icynovastriker
+  m_Overrides: 0
+  m_EnemyName:
+    m_LocalizedIdentifier: core.enemies.icynovastriker.name
+  m_TagList:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.enemies.passive
+    - m_Identifier: core.tags.enemies.slow
+  m_Attributes:
+  - m_InspectorElementName: core.modtypes.ship.life.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.life.flat
+    m_Value: 100
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.acceleration.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.acceleration.flat
+    m_Value: 4
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.movementspeed.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.movementspeed.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.gold.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.gold.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.experience.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.experience.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.drop.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.drop.flat
+    m_Value: 1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  m_IsSpawnable: 0
+  m_Difficulty: 1
+  m_Model: {fileID: 3766128934561450785, guid: b5bbd9d032d79fb41afceccf05a9e5d8, type: 3}
+  m_ActiveGemCollection: {fileID: 11400000, guid: 23d231ca5deb6af41a007a942b482185,
+    type: 2}

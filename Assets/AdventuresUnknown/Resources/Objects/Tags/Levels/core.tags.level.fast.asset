@@ -16,4 +16,4 @@ MonoBehaviour:
   m_Overrides: 0
   m_TagName:
     m_LocalizedIdentifier: core.tags.level.fast
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.4567151, b: 1, a: 1}

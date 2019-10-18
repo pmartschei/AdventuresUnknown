@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 228253558, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.items.gems.heal
+  m_EditorClassIdentifier: 
+  m_Identifier: core.items.gems.heal
+  m_Overrides: 0
+  m_ItemName:
+    m_LocalizedIdentifier: core.items.gems.heal.name
+  m_Description:
+    m_LocalizedIdentifier: core.items.gems.heal.description
+  m_IsStackable: 0
+  m_MaxStack: 1
+  m_Level: 0
+  m_CurrencyValue:
+    m_Currency:
+      m_Identifier: core.currencies.gold
+    m_Value: 10
+  m_DefaultAmount: 1
+  m_DefaultPowerLevel: 0
+  m_ItemTypeIdentifier:
+    m_Identifier: core.itemtypes.gem
+  m_Sprite: {fileID: 21300000, guid: fde605a87f0f9b74ebd094a72f14a1c6, type: 3}
+  m_ItemStackDisplay: {fileID: 2739460991793205617, guid: 5c03624604db0934eb30f90420465c3a,
+    type: 3}
+  m_Tags:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.skills.duration
+  m_FormatterType: activegem
+  m_CraftingActionCatalog:
+    m_Identifier: core.cac.gems
+  m_SupportFormatter: 
+  m_SupportAttributes: []
+  m_DisplaySupportMods: []
+  m_Attributes:
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skilleffects.heal.flat
+    m_Value: 50
+    m_IsCurve: 1
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 50
+        inSlope: 8
+        outSlope: 72.5
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 20
+        value: 1500
+        inSlope: 72.5
+        outSlope: 75
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40
+        value: 3000
+        inSlope: 75
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.effects.liferegen.flat
+    m_Value: 25
+    m_IsCurve: 1
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 25
+        inSlope: 8
+        outSlope: 6.25
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 20
+        value: 150
+        inSlope: 6.25
+        outSlope: 6.25
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40
+        value: 275
+        inSlope: 6.25
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.cooldown.flat
+    m_Value: 30
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.duration.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.energycost.flat
+    m_Value: 5
+    m_IsCurve: 1
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 35
+        inSlope: 8
+        outSlope: 2.25
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 20
+        value: 80
+        inSlope: 2.25
+        outSlope: 2.25
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40
+        value: 125
+        inSlope: 2.25
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  m_DisplayMods: {fileID: 11400000, guid: 6e313dae589bb4b44978d137bd33a5e3, type: 2}
+  m_GenericAttack: {fileID: 2534956010336229026, guid: ae35a1ba3b917924e86a1a64d06c8ebd,
+    type: 3}
+  m_SecondaryActiveGems: []

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223199053, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.cac.uniques
+  m_EditorClassIdentifier: 
+  m_Identifier: core.cac.uniques
+  m_Overrides: 0
+  m_CraftingActions:
+  - m_CraftingText:
+      m_LocalizedIdentifier: core.crafting.rerollsingle
+    m_Costs: {fileID: 11400000, guid: d52c05097b0ee5443829b1762309aec5, type: 2}
+    m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
+    m_Invoker: {fileID: 11400000, guid: 13299beca05891e459af316787c9441a, type: 2}
+  - m_CraftingText:
+      m_LocalizedIdentifier: core.crafting.rerollallexpl
+    m_Costs: {fileID: 11400000, guid: feaccf067cb82b349b9856570758443b, type: 2}
+    m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
+    m_Invoker: {fileID: 11400000, guid: 022d4233b82a116438a9d3e2af78d3c0, type: 2}
+  - m_CraftingText:
+      m_LocalizedIdentifier: core.crafting.rerollallimpl
+    m_Costs: {fileID: 11400000, guid: 7e7346a01fe37734ea67dc013b749831, type: 2}
+    m_Enabler: {fileID: 11400000, guid: 9733d2859b452c445894c789c5b9a0ba, type: 2}
+    m_Invoker: {fileID: 11400000, guid: 054c24b76a65c634c815d54011bc9164, type: 2}

@@ -18,19 +18,28 @@ namespace AdventuresUnknown.Core.Levels
         private void OnSuccess()
         {
             JourneyData journeyData = ObjectsManager.FindObjectByIdentifier<JourneyData>("core.datas.journey");
+            VendorData vendorData = ObjectsManager.FindObjectByIdentifier<VendorData>("core.datas.vendor");
+            ContextData contextData = ObjectsManager.FindObjectByIdentifier<ContextData>("core.datas.context");
 
             if (!journeyData) return;
 
             journeyData.AddCompletedLevel(LevelManager.CurrentLevel);
             journeyData.Difficulty++;
             journeyData.GenerateNextLevels();
+            if (vendorData)
+            {
+                if (contextData)
+                    vendorData.PlayerLevel = contextData.Level;
+                vendorData.GenerateItems(true);
+            }
 
             PlayerManager.Save();
         }
 
         private void OnFail()
         {
-            PlayerManager.PlayerWallet.AddValue("core.currencies.gold", PlayerManager.PlayerWallet.GetValue("core.currencies.gold") / 10 * 8);
+            PlayerManager.PlayerWallet.AddValue("core.currencies.gold", (int)(PlayerManager.PlayerWallet.GetValue("core.currencies.gold") * 0.8f));
+            PlayerManager.Save();
         }
 
         private void OnDisable()

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 1424132670, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: EntityIsDeadAction
   m_EditorClassIdentifier: 
-  m_ActionType: -1
+  m_Priority: 100000
+  m_ActionType: {fileID: 11400000, guid: d5ee8bf84f649fc4c8f5b9678554f130, type: 2}
   m_Value: 1

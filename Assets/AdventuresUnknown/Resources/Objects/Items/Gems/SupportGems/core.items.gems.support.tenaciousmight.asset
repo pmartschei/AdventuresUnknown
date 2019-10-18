@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1248011133, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.items.gems.support.tenaciousmight
+  m_EditorClassIdentifier: 
+  m_Identifier: core.items.gems.support.tenaciousmight
+  m_Overrides: 0
+  m_ItemName:
+    m_LocalizedIdentifier: core.items.gems.support.lmp.name
+  m_Description:
+    m_LocalizedIdentifier: core.items.gems.support.lmp.description
+  m_IsStackable: 0
+  m_MaxStack: 1
+  m_Level: 13
+  m_CurrencyValue:
+    m_Currency:
+      m_Identifier: core.currencies.gold
+    m_Value: 15
+  m_DefaultAmount: 1
+  m_DefaultPowerLevel: 0
+  m_ItemTypeIdentifier:
+    m_Identifier: core.itemtypes.gem
+  m_Sprite: {fileID: 21300000, guid: 1e2d444ae9d5a4ff1b47ffec28d5165c, type: 3}
+  m_ItemStackDisplay: {fileID: 2739460991793205617, guid: bce00af53b807dc4b8116e1a42288456,
+    type: 3}
+  m_Tags:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.skills.support
+  m_FormatterType: gems
+  m_CraftingActionCatalog:
+    m_Identifier: core.cac.gems
+  m_SupportFormatter: gemsupport
+  m_SupportAttributes:
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.criticalchance.more
+    m_Value: -1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.damage.more
+    m_Value: 0.25
+    m_IsCurve: 1
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.25
+        inSlope: 8
+        outSlope: 0.01
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 20
+        value: 0.45
+        inSlope: 0.01
+        outSlope: 0.01
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40
+        value: 0.65
+        inSlope: 0.01
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.energycost.more
+    m_Value: 0.4
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  m_DisplaySupportMods: []

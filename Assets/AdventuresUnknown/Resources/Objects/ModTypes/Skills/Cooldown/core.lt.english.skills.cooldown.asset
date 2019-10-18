@@ -17,3 +17,7 @@ MonoBehaviour:
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.cooldown.description
     m_String: Cooldown
+  - m_Identifier: core.mtf.skills.cooldown.gemhotkey.flatpre
+    m_String: 'Cooldown:'
+  - m_Identifier: core.mtf.skills.cooldown.gemhotkey.flatmain
+    m_String: 0.00s

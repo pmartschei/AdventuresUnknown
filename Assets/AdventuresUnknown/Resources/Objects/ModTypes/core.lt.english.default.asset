@@ -37,3 +37,11 @@ MonoBehaviour:
     m_String: more;less
   - m_Identifier: core.mtf.default.morepre
     m_String: 
+  - m_Identifier: core.mtf.empty
+    m_String: 
+  - m_Identifier: core.mtf.default.supportpredeal
+    m_String: Supported Skills deal
+  - m_Identifier: core.mtf.default.supportprehave
+    m_String: Supported Skills have
+  - m_Identifier: core.mtf.default.supportflatpostadditional
+    m_String: additional

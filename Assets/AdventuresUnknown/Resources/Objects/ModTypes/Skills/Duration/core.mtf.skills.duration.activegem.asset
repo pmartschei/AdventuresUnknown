@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1435628787, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.mtf.skills.duration.activegem
+  m_EditorClassIdentifier: 
+  m_Identifier: core.mtf.skills.duration.activegem
+  m_Overrides: 0
+  m_Type: activegem
+  m_Description:
+    m_LocalizedIdentifier: core.mtf.empty
+  m_AdditionalFormat:
+    m_Pre:
+      m_LocalizedIdentifier: core.mtf.skills.duration.gemhotkey.flatpre
+    m_Main:
+      m_LocalizedIdentifier: core.mtf.skills.duration.gemhotkey.flatmain
+    m_Post:
+      m_LocalizedIdentifier: core.mtf.empty
+  m_IncreasedFormat:
+    m_Pre:
+      m_LocalizedIdentifier: core.mtf.empty
+    m_Main:
+      m_LocalizedIdentifier: core.mtf.empty
+    m_Post:
+      m_LocalizedIdentifier: core.mtf.empty
+  m_MoreFormat:
+    m_Pre:
+      m_LocalizedIdentifier: core.mtf.empty
+    m_Main:
+      m_LocalizedIdentifier: core.mtf.empty
+    m_Post:
+      m_LocalizedIdentifier: core.mtf.empty
+  m_ColorsEnabled: 0

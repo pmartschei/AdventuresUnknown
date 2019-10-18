@@ -17,6 +17,6 @@ MonoBehaviour:
   m_CraftingActions:
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.increasepowerlevel
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: ed9b80a0b0ad0c047a525ad4a295ebae, type: 2}
     m_Enabler: {fileID: 11400000, guid: eb253fd1ff1e7304cb63d5c7c580cbcd, type: 2}
     m_Invoker: {fileID: 11400000, guid: 409a3dbf05aa4dd47a038777ac9d1eb6, type: 2}

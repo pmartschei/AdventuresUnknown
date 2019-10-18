@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.items.equipment.shields
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.items.equipment.blockshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.blockshield1.name
+    m_String: Block Shield T1
+  - m_Identifier: core.items.equipment.blockshield2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.blockshield2.name
+    m_String: Block Shield T2
+  - m_Identifier: core.items.equipment.energyregenshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.energyregenshield1.name
+    m_String: Energy Regen Shield T1
+  - m_Identifier: core.items.equipment.energyregenshield2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.energyregenshield2.name
+    m_String: Energy Regen Shield T2
+  - m_Identifier: core.items.equipment.energyregenshield3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.energyregenshield3.name
+    m_String: Energy Regen Shield T3
+  - m_Identifier: core.items.equipment.fireresistanceshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.fireresistanceshield1.name
+    m_String: Fire Resistance Shield T1
+  - m_Identifier: core.items.equipment.iceresistanceshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.iceresistanceshield1.name
+    m_String: Ice Resistance Shield T1
+  - m_Identifier: core.items.equipment.lifeshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifeshield1.name
+    m_String: Life Shield T1
+  - m_Identifier: core.items.equipment.lifeshield2.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifeshield2.name
+    m_String: Life Shield T2
+  - m_Identifier: core.items.equipment.lifeshield3.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lifeshield3.name
+    m_String: Life Shield T3
+  - m_Identifier: core.items.equipment.lightningresistanceshield1.description
+    m_String: 
+  - m_Identifier: core.items.equipment.lightningresistanceshield1.name
+    m_String: Lightning Resistance Shield T1

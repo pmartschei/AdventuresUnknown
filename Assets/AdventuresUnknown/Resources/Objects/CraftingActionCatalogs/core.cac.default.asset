@@ -17,41 +17,41 @@ MonoBehaviour:
   m_CraftingActions:
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.addrandom
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: e02faf4d001d2974abe5682bff623c21, type: 2}
     m_Enabler: {fileID: 11400000, guid: b6b2e149907db0842a6e1eeddca8dea2, type: 2}
     m_Invoker: {fileID: 11400000, guid: ecd2c66192059204d822258925d4e837, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.removerandom
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: e02faf4d001d2974abe5682bff623c21, type: 2}
     m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
     m_Invoker: {fileID: 11400000, guid: 95b424a9ce1530f40b292272eb9eabc3, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.rerollsingle
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: 2e19611887ab1c74bbcd9674c5958cb1, type: 2}
     m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
     m_Invoker: {fileID: 11400000, guid: 13299beca05891e459af316787c9441a, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.rerollallexpl
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: a96b0bb0c145525429491a836c99e0c2, type: 2}
     m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
     m_Invoker: {fileID: 11400000, guid: 022d4233b82a116438a9d3e2af78d3c0, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.rerollallimpl
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: 7e7346a01fe37734ea67dc013b749831, type: 2}
     m_Enabler: {fileID: 11400000, guid: 9733d2859b452c445894c789c5b9a0ba, type: 2}
     m_Invoker: {fileID: 11400000, guid: 054c24b76a65c634c815d54011bc9164, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.retiersingle
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: 0cff0d0a687404149bcb53df1abf2b46, type: 2}
     m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
     m_Invoker: {fileID: 11400000, guid: 109d68fd7cc6ce445a911fcc151c19eb, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.retierall
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: 0c3221bc8e142f042bdcf147d848c798, type: 2}
     m_Enabler: {fileID: 11400000, guid: d05538e8b92e11f42aa60f5984246d93, type: 2}
     m_Invoker: {fileID: 11400000, guid: 71b8713a366bfc646bfc625bb9847a1a, type: 2}
   - m_CraftingText:
       m_LocalizedIdentifier: core.crafting.completereroll
-    m_Costs: {fileID: 11400000, guid: f7475ee8fd58b8d4c8f3ddbd327259fb, type: 2}
+    m_Costs: {fileID: 11400000, guid: feaccf067cb82b349b9856570758443b, type: 2}
     m_Enabler: {fileID: 0}
     m_Invoker: {fileID: 11400000, guid: d93d9943534d964439c94687cb5591b0, type: 2}

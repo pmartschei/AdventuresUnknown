@@ -15,5 +15,9 @@ MonoBehaviour:
   m_LanguageIdentifier:
     m_Identifier: core.languages.english
   m_LocalizationData:
-  - m_Identifier: core.mtf.skills.projectilespeed.flatpre
+  - m_Identifier: core.mtf.skills.projectilespeed.description
     m_String: Projectile Speed
+  - m_Identifier: core.mtf.skills.projectilespeed.gemhotkey.flatpre
+    m_String: 'Projectile Speed:'
+  - m_Identifier: core.mtf.skills.projectilespeed.gemhotkey.flatmain
+    m_String: 0.00

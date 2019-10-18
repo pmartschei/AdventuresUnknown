@@ -20,6 +20,7 @@ namespace AdventuresUnknown.Core.Levels
         {
             m_ExtensionsToggleGroup.onToggleGroupToggleChanged.AddListener(OnToggleChange);
             OnToggleChange(false);
+            //OnWidthChange(this.GetComponent<RectTransform>().sizeDelta.x);
         }
         public void OnToggleChange(bool b)
         {

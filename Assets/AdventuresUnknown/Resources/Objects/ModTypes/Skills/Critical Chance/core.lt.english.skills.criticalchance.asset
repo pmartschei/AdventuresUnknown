@@ -16,4 +16,8 @@ MonoBehaviour:
     m_Identifier: core.languages.english
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.criticalchance.description
-    m_String: Critical Chance
+    m_String: Critical Strike Chance
+  - m_Identifier: core.mtf.skills.criticalchance.gemhotkey.flatpre
+    m_String: Has
+  - m_Identifier: core.mtf.skills.criticalchance.flatmain
+    m_String: 0.#%

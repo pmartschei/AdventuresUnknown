@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.levelnames.english
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.levelname.base
+    m_String: Base
+  - m_Identifier: core.levelname.colony
+    m_String: Colony
+  - m_Identifier: core.levelname.galaxy
+    m_String: Galaxy
+  - m_Identifier: core.levelname.solarsystem
+    m_String: Solar System
+  - m_Identifier: core.levelname.station
+    m_String: Station
+  - m_Identifier: core.levelname.terminal
+    m_String: Terminal

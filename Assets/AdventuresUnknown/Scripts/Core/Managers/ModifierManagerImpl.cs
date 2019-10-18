@@ -1,5 +1,8 @@
 ﻿using AdventuresUnknownSDK.Core.Managers;
+using AdventuresUnknownSDK.Core.Objects.Inventories;
+using AdventuresUnknownSDK.Core.Objects.Items.Interfaces;
 using AdventuresUnknownSDK.Core.Objects.Mods;
+using AdventuresUnknownSDK.Core.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +15,7 @@ namespace AdventuresUnknown.Core.Managers
 {
     public class ModifierManagerImpl : ModifierManager
     {
-
+        [SerializeField] private AbstractInvoker m_ModifyInvoker = null;
         private Dictionary<int, Dictionary<string, List<Mod>>> m_ModDictionary = new Dictionary<int, Dictionary<string, List<Mod>>>();
 
         #region Properties
@@ -61,12 +64,20 @@ namespace AdventuresUnknown.Core.Managers
                 if (tags == null || tags.Contains(entry.Key))
                     availableMods.AddRange(entry.Value);
             }
-            return availableMods.Distinct().ToArray();
+            return ModUtils.Filter(availableMods.Distinct().ToArray(),tags);
         }
 
         protected override Mod[] GetModifiersForDomainImpl(int domain)
         {
             return GetModifiersForDomainAndTag(domain, null);
+        }
+
+        protected override void ModifyItemStackImpl(ItemStack itemStack)
+        {
+            if (m_ModifyInvoker)
+            {
+                m_ModifyInvoker.Invoke(itemStack);
+            }
         }
         #endregion
     }

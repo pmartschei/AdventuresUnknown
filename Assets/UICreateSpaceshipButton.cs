@@ -1,6 +1,9 @@
 ﻿using AdventuresUnknownRuntime.Core.Utils.Identifiers;
 using AdventuresUnknownSDK.Core.Managers;
+using AdventuresUnknownSDK.Core.Objects.Currencies;
 using AdventuresUnknownSDK.Core.Objects.Datas;
+using AdventuresUnknownSDK.Core.Objects.Inventories;
+using AdventuresUnknownSDK.Core.Objects.Items;
 using AdventuresUnknownSDK.Core.UI.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,7 +45,20 @@ public class UICreateSpaceshipButton : MonoBehaviour
         cd.ShipName = shipName;
         //unique file name
         cd.SaveFileName = cd.ShipName + PlayerManager.FileExtension;
+        //starting gear
+        Inventory gems = ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.gems");
+        Wallet wallet = ObjectsManager.FindObjectByIdentifier<Wallet>("core.wallets.player");
+        wallet.AddValue("core.currencies.gold", 100);
+        gems.SetItemStack(ObjectsManager.FindObjectByIdentifier<Item>("core.items.gems.minigun").CreateItem(),0);
+        HotkeyData hotkeyData = ObjectsManager.FindObjectByIdentifier<HotkeyData>("core.datas.hotkeys");
+        HotkeyDisplayData hotkeyDisplayData = new HotkeyDisplayData();
+        hotkeyDisplayData.ActiveGem = gems.Items[0].Item as ActiveGem;
+        hotkeyDisplayData.Slot = 0;
+        hotkeyDisplayData.ContainerName = gems.Identifier;
+        hotkeyDisplayData.Identifier = "slot_0";
+        hotkeyData.PutHotkeyDisplayData(hotkeyDisplayData.Identifier, hotkeyDisplayData);
         PlayerManager.Save();
+        PlayerManager.Load(m_GameMode.Object.FolderName+"/"+cd.SaveFileName);
         SceneManager.LoadScene("core.scenes.hangar");
     }
 }

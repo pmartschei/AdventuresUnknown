@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1486782722, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: New Orbit Parent State
+  m_EditorClassIdentifier: 
+  m_MaxOrbitRadius: 0.2
+  m_MinOrbitRadius: 0.5
+  m_OrbitSpeed: 40
+  m_OrbitSpeedMultiplier: 1
+  m_OnTargetFoundState: {fileID: 11400000, guid: 0a8caad0d8a9d4f48a93f61b618ec1df,
+    type: 2}

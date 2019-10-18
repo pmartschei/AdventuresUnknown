@@ -1,6 +1,7 @@
 ﻿using AdventuresUnknown.Core.Items;
 using AdventuresUnknownSDK.Core.Entities;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
+using AdventuresUnknownSDK.Core.Entities.Controllers.Interfaces;
 using AdventuresUnknownSDK.Core.Logic.ActiveGemContainers;
 using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Datas;
@@ -32,6 +33,7 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
     private HotkeyDisplayData m_HotKeyDisplayData = null;
     private PlayerActiveGemContainer m_PlayerActiveGemContainer = null;
 
+    private bool m_ValidInputDown = false;
     #region Properties
     public HotkeyDisplayData HotKeyDisplayData
     {
@@ -114,11 +116,19 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
             if (m_HotKeyDisplayData != null && m_HotKeyDisplayData.Slot >= 0)
             {
                 activeGem = m_HotKeyDisplayData.ActiveGem;
-
                 if (m_PlayerActiveGemContainer)
                 {
-                    entity = m_PlayerActiveGemContainer.CalculateEntity(m_HotKeyDisplayData.Slot);
-                    modTypes = m_PlayerActiveGemContainer.CalculateDisplayMods(m_HotKeyDisplayData.Slot);
+                    if (m_PlayerActiveGemContainer.Inventory.Items[m_HotKeyDisplayData.Slot].Item == activeGem)
+                    {
+                        entity = m_PlayerActiveGemContainer.CalculateEntity(m_HotKeyDisplayData.Slot, true);
+                        modTypes = m_PlayerActiveGemContainer.CalculateDisplayMods(m_HotKeyDisplayData.Slot);
+                    }
+                    else
+                    {
+                        m_HotKeyDisplayData = null;
+                        m_PlayerActiveGemContainer = null;
+                        return;
+                    }
                 }
             }
             m_ActiveGemDisplay.Display(activeGem, entity, modTypes);
@@ -169,16 +179,33 @@ public class UIHotkeySlot : MonoBehaviour, IPointerClickHandler
     private void Update()
     {
         UpdateDisplay();
+    }
+    private void FixedUpdate()
+    {
         if (m_HotKeyDisplayData == null) return;
-        if (Input.GetKey(m_Hotkey))
+        bool spawn = false;
+        if (!m_ValidInputDown && Input.GetKeyDown(m_Hotkey))
         {
-            if (m_PlayerActiveGemContainer)
+            m_ValidInputDown = !EventSystem.current.IsPointerOverGameObject();
+            spawn = m_ValidInputDown;
+        }
+        else if (Input.GetKey(m_Hotkey) && m_ValidInputDown)
+        {
+            spawn = true;
+        }
+        else
+        {
+            m_ValidInputDown = false;
+        }
+        if (spawn)
+        {
+            if (m_PlayerActiveGemContainer && PlayerManager.PlayerController)
             {
-                m_PlayerActiveGemContainer.Spawn(m_HotKeyDisplayData.Slot, new Vector3(1, 1, 1), new Vector3(0, 0, 0));
+                IMuzzleComponentController muzzleComponentController = PlayerManager.PlayerController as IMuzzleComponentController;
+                m_PlayerActiveGemContainer.Spawn(PlayerManager.PlayerController, m_HotKeyDisplayData.Slot, muzzleComponentController != null ? muzzleComponentController.Muzzles : null);
             }
         }
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         PlayerActiveGemContainer[] pagcs = PlayerManager.SpaceShip.GetComponentsInChildren<PlayerActiveGemContainer>(false);

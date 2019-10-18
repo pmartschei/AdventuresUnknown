@@ -10,9 +10,20 @@ public class UISwitch : MonoBehaviour
     public GameObject ShowWhenOn { get => m_ShowWhenOn; set => m_ShowWhenOn = value; }
     public GameObject ShowWhenOff { get => m_ShowWhenOff; set => m_ShowWhenOff = value; }
 
+    private bool m_IsActive = false;
+
     public virtual void OnSwitch(bool v)
     {
-        m_ShowWhenOn.SetActive(v);
-        m_ShowWhenOff.SetActive(!v);
+        m_IsActive = v;
+        if (m_ShowWhenOn)
+            m_ShowWhenOn.SetActive(v);
+        if (m_ShowWhenOff)
+            m_ShowWhenOff.SetActive(!v);
     }
+
+    public virtual void Switch()
+    {
+        OnSwitch(!m_IsActive);
+    }
+
 }

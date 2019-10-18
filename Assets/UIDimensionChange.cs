@@ -25,7 +25,11 @@ public class UIDimensionChange : MonoBehaviour
     }
     #endregion
     #region Methods
-
+    private void Start()
+    {
+        OnWidthChangeEvent.Invoke(RectTransform.rect.width);
+        OnHeightChangeEvent.Invoke(RectTransform.rect.height);
+    }
     void Update()
     {
         if (RectTransform.hasChanged)

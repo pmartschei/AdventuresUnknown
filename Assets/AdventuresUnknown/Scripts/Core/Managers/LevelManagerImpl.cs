@@ -1,9 +1,12 @@
-﻿using AdventuresUnknownSDK.Core.Entities;
+﻿using AdventuresUnknownSDK.Core.Attributes;
+using AdventuresUnknownSDK.Core.Entities;
 using AdventuresUnknownSDK.Core.Entities.Controllers;
 using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Enemies;
 using AdventuresUnknownSDK.Core.Objects.Levels;
+using AdventuresUnknownSDK.Core.Objects.Mods;
+using AdventuresUnknownSDK.Core.Utils.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +20,8 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
     {
 
         [SerializeField] private LevelGeneratorDescription m_LevelGeneratorDescription = null;
+        [Layer]
+        [SerializeField] private int m_SpawnLayer = 0;
 
         private Level m_CurrentLevel = null;
         private UnityEvent m_SuccessEvent = new UnityEvent();
@@ -88,7 +93,14 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         {
             if (enemy == null) return null;
             EnemyModel enemyModel = Instantiate(enemy.Model, pos, Quaternion.identity,UIManager.EntityTransform);
+            enemyModel.gameObject.transform.MoveToLayer(m_SpawnLayer);
             EntityDescription entityDescription = enemyModel.EntityBehaviour.Entity.Description;
+            Attribute[] attributes = new Attribute[enemy.Attributes.Length];
+            for(int i = 0; i < attributes.Length; i++)
+            {
+                attributes[i] = enemy.Attributes[i].Clone();
+            }
+            enemyModel.BaseEntityStats.Attributes = attributes;
             entityDescription.Enemy = enemy;
             entityDescription.EntityType = EntityType.SpaceShip;
             EnemyController ec = enemyModel.EntityController as EnemyController;

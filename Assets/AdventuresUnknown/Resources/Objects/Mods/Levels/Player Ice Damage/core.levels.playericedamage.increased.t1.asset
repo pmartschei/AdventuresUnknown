@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1963398074, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.levels.playericedamage.increased.t1
+  m_EditorClassIdentifier: 
+  m_Identifier: core.levels.playericedamage.increased.t1
+  m_Overrides: 0
+  m_ModBaseIdentifier:
+    m_Identifier: core.modtypes.levels.playericedamage.increased
+  m_Domain: 2
+  m_ModGroups: []
+  m_Tier: 1
+  m_RequiredLevel: 0
+  m_MinValue: -0.1
+  m_MaxValue: -0.2
+  m_Round: 0.01
+  m_WeightedTagList:
+    m_WeightedTags:
+    - Tag:
+        m_Identifier: core.tags.level.elemental
+      Weight: 100
+    - Tag:
+        m_Identifier: core.tags.level.default
+      Weight: 100

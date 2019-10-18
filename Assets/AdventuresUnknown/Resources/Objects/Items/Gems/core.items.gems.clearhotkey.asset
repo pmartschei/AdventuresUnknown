@@ -36,5 +36,10 @@ MonoBehaviour:
     m_TagIdentifiers:
     - m_Identifier: core.tags.equipment.default
   m_FormatterType: 
+  m_CraftingActionCatalog:
+    m_Identifier: core.cac.gems
   m_Attributes: []
-  m_GenericAttack: {fileID: 0}
+  m_DisplayMods: []
+  m_GenericAttack: {fileID: 1394900525836481362, guid: d4e505e1040de804cbe77bf71b0b7388,
+    type: 3}
+  m_SecondaryActiveGems: []

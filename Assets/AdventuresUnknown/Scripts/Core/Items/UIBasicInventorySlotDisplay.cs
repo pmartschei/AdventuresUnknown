@@ -25,6 +25,10 @@ namespace AdventuresUnknown.Core.Items
         {
             m_CanvasGroup = GetComponent<CanvasGroup>();
         }
+        private void OnDisable()
+        {
+            OnPointerExit(null);
+        }
         public override bool Display(ItemStack itemStack)
         {
             m_LastItemStack = itemStack;
@@ -49,7 +53,13 @@ namespace AdventuresUnknown.Core.Items
             }
             if (m_AmountText)
             {
-                m_AmountText.text = itemStack.Amount.ToString();
+                if (itemStack.Item.IsStackable) {
+                    m_AmountText.text = itemStack.Amount.ToString();
+                }
+                else
+                {
+                    m_AmountText.text = "";
+                }
             }
             return true;
         }

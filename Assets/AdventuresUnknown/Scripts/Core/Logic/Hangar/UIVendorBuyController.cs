@@ -1,9 +1,12 @@
-﻿using AdventuresUnknownSDK.Core.Managers;
+﻿using AdventuresUnknownSDK.Core.Log;
+using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Currencies;
+using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
 using AdventuresUnknownSDK.Core.UI.Interfaces;
 using AdventuresUnknownSDK.Core.UI.Items;
 using AdventuresUnknownSDK.Core.UI.Items.Interfaces;
+using AdventuresUnknownSDK.Core.Utils.Identifiers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +20,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
     {
         [SerializeField] private ICurrencyText m_CurrencyText = null;
         [SerializeField] private Button m_BuyButton = null;
+        [SerializeField] private VendorDataIdentifier m_VendorData = null;
         private ExtensionsToggleGroup m_ToggleGroup = null;
         private ItemStack m_SelectedItem = null;
         private IInventorySlot m_SelectedInventorySlot = null;
@@ -26,7 +30,13 @@ namespace AdventuresUnknown.Core.Logic.Hangar
         {
             m_ToggleGroup = GetComponent<ExtensionsToggleGroup>();
         }
-
+        private void Start()
+        {
+            if (!m_VendorData.ConsistencyCheck())
+            {
+                GameConsole.LogWarningFormat("VendorData is invalid {0}", this);
+            }
+        }
         private void OnEnable()
         {
             PlayerManager.OnWalletDisplayChange.AddListener(OnWalletChange);
@@ -58,7 +68,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
             cv.Currency.Identifier = "core.currencies.gold";
             cv.Currency.ConsistencyCheck();
             cv.Value = 0;
-            if (m_SelectedItem != null)
+            if (m_SelectedItem != null && !m_SelectedItem.IsEmpty)
             {
                 cv = m_SelectedItem.Item.CurrencyValue;
                 m_CurrencyText.gameObject.SetActive(true);
@@ -69,7 +79,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
             }
             if (m_CurrencyText)
             {
-                m_CurrencyText.SetText(cv.Value.ToString());
+                m_CurrencyText.SetText(cv.Value * (m_SelectedItem != null ? m_SelectedItem.ExplicitMods.Length : 0));
                 m_CurrencyText.SetCurrency(cv.Currency.Object);
             }
             m_BuyButton.interactable = PlayerCanBuySelectedItem();
@@ -84,9 +94,14 @@ namespace AdventuresUnknown.Core.Logic.Hangar
             //TODO IsFull Check
             //if (inventory.CanAddItemStack(newItemStack)) return;
 
+            if (m_VendorData.Object)
+            {
+                m_VendorData.Object.SlotsBought.Add(m_SelectedInventorySlot.Slot);
+            }
             CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
-            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value);
+            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value*m_SelectedItem.ExplicitMods.Length);
             m_SelectedInventorySlot.Inventory.RemoveItemStack(m_SelectedInventorySlot.Slot);
+
             inventory.AddItemStack(newItemStack);
 
             m_ToggleGroup.SetAllTogglesOff();
@@ -95,7 +110,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
 
         private bool PlayerCanBuySelectedItem()
         {
-            if (m_SelectedItem == null) return false;
+            if (m_SelectedItem == null || m_SelectedItem.IsEmpty) return false;
             CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
 
             if (PlayerManager.PlayerWallet.GetValue(cv.Currency.Identifier) < cv.Value) return false;

@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Pre:
       m_LocalizedIdentifier: core.mtf.default.flatpre
     m_Main:
-      m_LocalizedIdentifier: core.mtf.default.flatmain
+      m_LocalizedIdentifier: core.mtf.skills.criticaldamage.flatmain
     m_Post:
       m_LocalizedIdentifier: core.mtf.default.flatpost
   m_IncreasedFormat:

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Identifier: core.actiontype.spawn
   m_Overrides: 0
-  m_Value: 3
+  m_Value: 4

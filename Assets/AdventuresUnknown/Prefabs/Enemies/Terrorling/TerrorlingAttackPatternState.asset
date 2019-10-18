@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 541067491, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: TerrorlingAttackPatternState
+  m_EditorClassIdentifier: 
+  m_EntityStates:
+  - {fileID: 11400000, guid: 35880e50142fc60438df139e66c480bb, type: 2}
+  - {fileID: 11400000, guid: 8db4939b923f4584daeeff95ff54e4c3, type: 2}
+  m_TargetSearchEnabled: 1
+  m_DistanceCheckEnabled: 1
+  m_MaxTargetRadius: 25

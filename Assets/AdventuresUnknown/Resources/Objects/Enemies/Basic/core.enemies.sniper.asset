@@ -19,6 +19,9 @@ MonoBehaviour:
   m_TagList:
     m_TagIdentifiers:
     - m_Identifier: core.tags.enemies.ranged
+    - m_Identifier: core.tags.enemies.active
+    - m_Identifier: core.tags.enemies.slow
+    - m_Identifier: core.tags.enemies.squishy
   m_Attributes:
   - m_InspectorElementName: core.modtypes.ship.life.flat
     m_ModBaseIdentifier:
@@ -58,6 +61,198 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-  m_Difficulty: 2
+  - m_InspectorElementName: core.modtypes.ship.movementspeed.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.movementspeed.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.5189046
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.9666982
+        value: 1.0205288
+        inSlope: 0.04119824
+        outSlope: 0.04119824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47702843
+      - serializedVersion: 3
+        time: 4.977221
+        value: 9.027165
+        inSlope: 2.6595502
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.ship.acceleration.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.ship.acceleration.flat
+    m_Value: 5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.5189046
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.9666982
+        value: 1.0205288
+        inSlope: 0.04119824
+        outSlope: 0.04119824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47702843
+      - serializedVersion: 3
+        time: 4.977221
+        value: 9.027165
+        inSlope: 2.6595502
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.gold.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.gold.flat
+    m_Value: 15
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.5189046
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.9666982
+        value: 1.0205288
+        inSlope: 0.04119824
+        outSlope: 0.04119824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47702843
+      - serializedVersion: 3
+        time: 4.977221
+        value: 9.027165
+        inSlope: 2.6595502
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.experience.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.experience.flat
+    m_Value: 15
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.5189046
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.9666982
+        value: 1.0205288
+        inSlope: 0.04119824
+        outSlope: 0.04119824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47702843
+      - serializedVersion: 3
+        time: 4.977221
+        value: 9.027165
+        inSlope: 2.6595502
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: core.modtypes.utility.drop.flat
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.utility.drop.flat
+    m_Value: 1
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.5189046
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.9666982
+        value: 1.0205288
+        inSlope: 0.04119824
+        outSlope: 0.04119824
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47702843
+      - serializedVersion: 3
+        time: 4.977221
+        value: 9.027165
+        inSlope: 2.6595502
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  m_IsSpawnable: 0
+  m_Difficulty: 3
   m_Model: {fileID: 8224741927823638763, guid: 6e690a6a515a0474daf1f29429f8c143, type: 3}
-  m_AttackPattern: {fileID: 11400000, guid: af2beb3ffb7f0634baca3954d4aa953f, type: 2}
+  m_ActiveGemCollection: {fileID: 11400000, guid: d6289f66092922b44b56e84ea62ded43,
+    type: 2}

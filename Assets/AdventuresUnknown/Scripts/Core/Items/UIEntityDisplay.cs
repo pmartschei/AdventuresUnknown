@@ -33,7 +33,9 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Items
             {
                 foreach (Stat stat in entity.Stats)
                 {
-                    sb.Append(stat.ModType.ToText(formatter, stat.Calculated, AdventuresUnknownSDK.Core.Objects.Mods.CalculationType.Calculated));
+                    string text = stat.ModType.ToText(formatter, stat.Calculated, AdventuresUnknownSDK.Core.Objects.Mods.CalculationType.Calculated);
+                    if (text.Length == 0) continue;
+                    sb.Append(text);
                     sb.AppendLine();
                 }
             }
@@ -42,7 +44,9 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Items
                 foreach(string modType in modTypes)
                 {
                     Stat stat = entity.GetStat(modType);
-                    sb.Append(stat.ModType.ToText(formatter, stat.Calculated, AdventuresUnknownSDK.Core.Objects.Mods.CalculationType.Calculated));
+                    string text = stat.ModType.ToText(formatter, stat.Calculated, AdventuresUnknownSDK.Core.Objects.Mods.CalculationType.Calculated);
+                    if (text.Length == 0) continue;
+                    sb.Append(text);
                     sb.AppendLine();
                 }
             }

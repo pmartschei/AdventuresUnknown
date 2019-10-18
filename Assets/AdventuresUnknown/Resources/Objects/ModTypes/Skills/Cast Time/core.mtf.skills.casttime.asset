@@ -28,14 +28,14 @@ MonoBehaviour:
     m_Pre:
       m_LocalizedIdentifier: core.mtf.default.increasedpre
     m_Main:
-      m_LocalizedIdentifier: core.mtf.default.increasedmain
+      m_LocalizedIdentifier: core.mtf.skills.casttime.increasedmain
     m_Post:
       m_LocalizedIdentifier: core.mtf.default.increasedpost
   m_MoreFormat:
     m_Pre:
       m_LocalizedIdentifier: core.mtf.default.morepre
     m_Main:
-      m_LocalizedIdentifier: core.mtf.default.moremain
+      m_LocalizedIdentifier: core.mtf.skills.casttime.moremain
     m_Post:
       m_LocalizedIdentifier: core.mtf.default.morepost
   m_ColorsEnabled: 0

@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 228253558, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.items.gems.exploder.defaultattack
+  m_EditorClassIdentifier: 
+  m_Identifier: core.items.gems.exploder.defaultattack
+  m_Overrides: 0
+  m_ItemName:
+    m_LocalizedIdentifier: core.items.gems.exploder.defaultattack.name
+  m_Description:
+    m_LocalizedIdentifier: core.items.gems.exploder.defaultattack.description
+  m_IsStackable: 0
+  m_MaxStack: 1
+  m_Level: 0
+  m_CurrencyValue:
+    m_Currency:
+      m_Identifier: core.currencies.gold
+    m_Value: 0
+  m_DefaultAmount: 1
+  m_DefaultPowerLevel: 0
+  m_ItemTypeIdentifier:
+    m_Identifier: core.itemtypes.gem
+  m_Sprite: {fileID: 21300000, guid: 84e995a5db41ca54585f7af9841a0bda, type: 3}
+  m_ItemStackDisplay: {fileID: 0}
+  m_Tags:
+    m_TagIdentifiers:
+    - m_Identifier: core.tags.skills.fire
+    - m_Identifier: core.tags.skills.ice
+    - m_Identifier: core.tags.skills.lightning
+    - m_Identifier: core.tags.skills.area
+  m_FormatterType: 
+  m_CraftingActionCatalog:
+    m_Identifier: core.cac.gems
+  m_SupportFormatter: 
+  m_SupportAttributes: []
+  m_DisplaySupportMods: []
+  m_Attributes:
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.cooldown.flat
+    m_Value: 2
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.casttime.flat
+    m_Value: 0.5
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.firedamage.flat
+    m_Value: 5
+    m_IsCurve: 1
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 25
+        inSlope: 1
+        outSlope: 45
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 70
+        inSlope: 45
+        outSlope: 70
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 140
+        inSlope: 70
+        outSlope: 95
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 235
+        inSlope: 95
+        outSlope: 145
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 380
+        inSlope: 145
+        outSlope: 195
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 575
+        inSlope: 195
+        outSlope: 275
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 850
+        inSlope: 275
+        outSlope: 355
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 1205
+        inSlope: 355
+        outSlope: 465
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8
+        value: 1670
+        inSlope: 465
+        outSlope: 575
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 9
+        value: 2245
+        inSlope: 575
+        outSlope: 705
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2950
+        inSlope: 705
+        outSlope: 835
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: 3785
+        inSlope: 835
+        outSlope: 965
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 12
+        value: 4750
+        inSlope: 965
+        outSlope: 1095
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: 5845
+        inSlope: 1095
+        outSlope: 1225
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 14
+        value: 7070
+        inSlope: 1225
+        outSlope: 1355
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 15
+        value: 8425
+        inSlope: 1355
+        outSlope: 1485
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 16
+        value: 9910
+        inSlope: 1485
+        outSlope: 1615
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 17
+        value: 11525
+        inSlope: 1615
+        outSlope: 1745
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 18
+        value: 13270
+        inSlope: 1745
+        outSlope: 1875
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 19
+        value: 15145
+        inSlope: 1875
+        outSlope: 2005
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 20
+        value: 17150
+        inSlope: 2005
+        outSlope: 892.5
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 40
+        value: 35000
+        inSlope: 892.5
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - m_InspectorElementName: 
+    m_ModBaseIdentifier:
+      m_Identifier: core.modtypes.skills.duration.flat
+    m_Value: 3
+    m_IsCurve: 0
+    m_ValueCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+  m_DisplayMods: []
+  m_GenericAttack: {fileID: 4457434379830606641, guid: e3c81ed7abab1b642a2e9f6b9c780695,
+    type: 3}
+  m_SecondaryActiveGems: []

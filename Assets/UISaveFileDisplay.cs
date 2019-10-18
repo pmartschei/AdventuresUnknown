@@ -5,21 +5,24 @@ using AdventuresUnknownSDK.Core.UI.Interfaces;
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace AdventuresUnknown
 {
-    public class UISaveFileDisplay : MonoBehaviour, IPointerClickHandler,IDragHandler,IBeginDragHandler,IEndDragHandler
+    public class UISaveFileDisplay : MonoBehaviour
     {
         [SerializeField] private IGameText m_NameText = null;
         [SerializeField] private IGameText m_LevelText = null;
         [SerializeField] private IGameText m_PlayedText = null;
         [SerializeField] private CanvasGroup m_CanvasGroup = null;
+        [SerializeField] private ExtensionsToggle m_ExtensionsToggle = null;
 
         private FileObject m_FileObject = null;
 
         private UISaveFileDisplay m_DragObject = null;
 
         public FileObject FileObject { get => m_FileObject; }
+        public ExtensionsToggle ExtensionsToggle { get => m_ExtensionsToggle;}
 
         public void Display(FileObject fileObject)
         {
@@ -43,43 +46,44 @@ namespace AdventuresUnknown
             }
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public void Delete()
         {
-            if (eventData.clickCount == 2)
-            {
-                m_FileObject.Load();
-                SceneManager.LoadScene("core.scenes.hangar");
-            }
+            m_FileObject.Delete();
+        }
+        public void Load()
+        {
+            m_FileObject.Load();
+            SceneManager.LoadScene("core.scenes.hangar");
         }
 
-        public void OnBeginDrag(PointerEventData eventData)
-        {
-            eventData.useDragThreshold = false;
-            m_DragObject = Instantiate(this,this.gameObject.transform.root);
-            m_DragObject.GetComponent<RectTransform>().sizeDelta = GetComponent<RectTransform>().sizeDelta;
-            m_DragObject.m_CanvasGroup.interactable = false;
-            m_DragObject.m_CanvasGroup.blocksRaycasts = false;
-        }
+        //public void OnBeginDrag(PointerEventData eventData)
+        //{
+        //    eventData.useDragThreshold = false;
+        //    m_DragObject = Instantiate(this,this.gameObject.transform.root);
+        //    m_DragObject.GetComponent<RectTransform>().sizeDelta = GetComponent<RectTransform>().sizeDelta;
+        //    m_DragObject.m_CanvasGroup.interactable = false;
+        //    m_DragObject.m_CanvasGroup.blocksRaycasts = false;
+        //}
 
-        public void OnDrag(PointerEventData eventData)
-        {
-            Canvas c = m_DragObject.transform.root.GetComponent<Canvas>();
-            if (c == null) return;
-            Vector3 pos = c.worldCamera.ScreenToWorldPoint(eventData.position);
-            pos.z = -9.7f;
-            m_DragObject.transform.position = pos;
-        }
+        //public void OnDrag(PointerEventData eventData)
+        //{
+        //    Canvas c = m_DragObject.transform.root.GetComponent<Canvas>();
+        //    if (c == null) return;
+        //    Vector3 pos = c.worldCamera.ScreenToWorldPoint(eventData.position);
+        //    pos.z = c.transform.position.z;
+        //    m_DragObject.transform.position = pos;
+        //}
 
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            if (m_DragObject)
-            {
-                Destroy(m_DragObject.gameObject);
-            }
-            if (eventData.used)
-            {
-                Destroy(gameObject);
-            }
-        }
+        //public void OnEndDrag(PointerEventData eventData)
+        //{
+        //    if (m_DragObject)
+        //    {
+        //        Destroy(m_DragObject.gameObject);
+        //    }
+        //    if (eventData.used)
+        //    {
+        //        Destroy(gameObject);
+        //    }
+        //}
     }
 }

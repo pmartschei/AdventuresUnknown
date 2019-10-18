@@ -17,6 +17,7 @@ MonoBehaviour:
   m_ModBaseIdentifier:
     m_Identifier: core.modtypes.levels.playerlife.more
   m_Domain: 2
+  m_ModGroups: []
   m_Tier: 2
   m_RequiredLevel: 0
   m_MinValue: -0.06
@@ -25,13 +26,10 @@ MonoBehaviour:
   m_WeightedTagList:
     m_WeightedTags:
     - Tag:
-        m_Identifier: core.tags.level.healthy
-      Weight: 200
-    - Tag:
-        m_Identifier: core.tags.level.tough
+        m_Identifier: core.tags.level.dangerous
       Weight: 400
     - Tag:
-        m_Identifier: core.tags.level.immortal
+        m_Identifier: core.tags.level.deadly
       Weight: 200
     - Tag:
         m_Identifier: core.tags.level.default

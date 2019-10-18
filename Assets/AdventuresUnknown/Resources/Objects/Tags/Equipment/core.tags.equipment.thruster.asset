@@ -15,5 +15,5 @@ MonoBehaviour:
   m_Identifier: core.tags.equipment.thruster
   m_Overrides: 0
   m_TagName:
-    m_LocalizedIdentifier: core.tags.equipment.default
+    m_LocalizedIdentifier: core.tags.equipment.thruster
   m_Color: {r: 1, g: 1, b: 1, a: 1}

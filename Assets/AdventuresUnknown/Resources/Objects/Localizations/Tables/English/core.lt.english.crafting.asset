@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.english.crafting
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.crafting.addrandom
+    m_String: Add Random Explicit
+  - m_Identifier: core.crafting.removerandom
+    m_String: Remove Random Explicit
+  - m_Identifier: core.crafting.rerollsingle
+    m_String: Reroll Random Explicit
+  - m_Identifier: core.crafting.rerollallexpl
+    m_String: Reroll All Explicits
+  - m_Identifier: core.crafting.rerollallimpl
+    m_String: Reroll All Implicits
+  - m_Identifier: core.crafting.retiersingle
+    m_String: Retier Random Explicit
+  - m_Identifier: core.crafting.retierall
+    m_String: Retier All Explicits
+  - m_Identifier: core.crafting.completereroll
+    m_String: Randomize Item
+  - m_Identifier: core.crafting.increasepowerlevel
+    m_String: Increase Power Level by 1

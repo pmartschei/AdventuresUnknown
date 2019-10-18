@@ -17,6 +17,7 @@ namespace AdventuresUnknown.Core.Levels
 {
     public class UILevelOverlay : AbstractLevelDisplay
     {
+        [SerializeField] private IGameText m_LevelNameText = null;
         [SerializeField] private IGameText m_WavesText = null;
         [SerializeField] private IGameText m_DelayText = null;
         [SerializeField] private IGameText m_TagsText = null;
@@ -39,6 +40,8 @@ namespace AdventuresUnknown.Core.Levels
         {
             m_CurrentLevel = level;
             if (m_CurrentLevel == null) return false;
+            if (m_LevelNameText)
+                m_LevelNameText.SetText(level.LevelPrefix.LocalizedString + " " + level.LevelName.LocalizedString + " " + level.LevelSuffix.LocalizedString);
             if (m_WavesText)
                 m_WavesText.SetText(level.WaveCount);
             if (m_DelayText)

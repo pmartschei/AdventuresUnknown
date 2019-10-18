@@ -16,4 +16,12 @@ MonoBehaviour:
     m_Identifier: core.languages.english
   m_LocalizationData:
   - m_Identifier: core.mtf.skills.casttime.description
-    m_String: Cast Time
+    m_String: Attack Speed
+  - m_Identifier: core.mtf.skills.casttime.activegem.flatpre
+    m_String: 'Attack Time:'
+  - m_Identifier: core.mtf.skills.casttime.activegem.flatmain
+    m_String: 0.00s
+  - m_Identifier: core.mtf.skills.casttime.increasedpost
+    m_String: reduced;increased
+  - m_Identifier: core.mtf.skills.casttime.morepost
+    m_String: less;more

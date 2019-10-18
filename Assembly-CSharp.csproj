@@ -25,7 +25,7 @@
     <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_7;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+    <NoWarn>0169;CS0649;IDE0051</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -34,7 +34,7 @@
     <OutputPath>Temp\bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+    <NoWarn>0169;CS0649;IDE0051</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
@@ -82,12 +82,12 @@
     <Compile Include="Assets\_MK\MKGlowFree\Scripts\RenderTargetContext.cs" />
     <Compile Include="Assets\_MK\MKGlowFree\Scripts\Resources.cs" />
     <Compile Include="Assets\_MK\MKGlowFree\Scripts\Settings.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\CustomBarrageAttack.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\BasicProjectileAttack.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\DummyAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\MineAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\MinionSpawnAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\NovaAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\ShotgunAttack.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Attacks\SplitAttack.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\ClearCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\CreateItemCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\GenerateNewLevelsCommand.cs" />
@@ -97,11 +97,8 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\LoadSceneCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\SaveCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\SpawnEnemyCommand.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\AttackState.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Exploder\ExploderAttackState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\SniperAttackState.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\WanderState.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Utility\LayAttackState.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Utility\MultiState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIActiveGemDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIBasicInventorySlotDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIBasicItemStackDisplay.cs" />
@@ -109,12 +106,12 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UICraftingSlotDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIEntityDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIEquipmentDisplay.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIGemDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIHotkeyActiveGemDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIInventorySlotSelectable.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\BlockingBorder.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\FailSuccessController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\LevelController.cs" />
-    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\LevelControllerEditor.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\PushingBorder.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UIHistoryController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UIHistoryDisplay.cs" />
@@ -123,6 +120,7 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Levels\UILevelSelectionController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UICraftingActionDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIHangarController.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIHangarHeaderPlayer.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorBuyController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorSlotDrop.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIGameModeDisplay.cs" />
@@ -133,14 +131,17 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\CooldownManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\CraftingActionManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\DropManagerImpl.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\ExperienceManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\GameSettingsManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\LevelManagerImpl.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\LevelObjectManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\LocalizationsManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\LogManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\ModActionManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\ModifierManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\ObjectsManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\PlayerManagerImpl.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\PoolManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\ProtectionCauseManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\SceneManagerImpl.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Managers\StartUpManager.cs" />
@@ -149,6 +150,10 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\UIGameConsole\UIGameConsole.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\UIGameConsole\UIGameConsoleEntry.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\UIGameConsole\UIGameConsoleHelpPanel.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Visuals\MineDetonationAnimation.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Visuals\ParticleSystemStartColorVisualChanger.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Visuals\TrailVisualChanger.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Visuals\VisualChanger.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\AdventuresUnknownFormatter.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\LayoutElementFitParent.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\Log.cs" />
@@ -157,7 +162,10 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\LogLevel.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\StringChecker.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\HexagonLayoutGroup.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\UICanvas.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\UIExit.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\UIPauseMenu.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UI\UISelection.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIExperiencePercentageImage.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIStatPercentageImage.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Utils\UIStatText.cs" />
@@ -336,8 +344,12 @@
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationBehaviour.cs" />
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationComponent.cs" />
     <Compile Include="Assets\Constellation\Plugins\Scripts\Unity\ConstellationEditable.cs" />
+    <Compile Include="Assets\FollowPlayer.cs" />
+    <Compile Include="Assets\HighlightItemDrop.cs" />
+    <Compile Include="Assets\InitializeGame.cs" />
     <Compile Include="Assets\ItemDrop.cs" />
     <Compile Include="Assets\LoadAssetBundle.cs" />
+    <Compile Include="Assets\LoadNextLevels.cs" />
     <Compile Include="Assets\LookAtMouse.cs" />
     <Compile Include="Assets\PandaBehaviour\Core\PandaBehaviour.cs" />
     <Compile Include="Assets\PandaBehaviour\Examples\00_ChangeColor\Assets\MyCube.cs" />
@@ -357,15 +369,22 @@
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Unit.cs" />
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\UnitExplosion.cs" />
     <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\WaypointPath.cs" />
+    <Compile Include="Assets\ParticleSystemAutoDestroy.cs" />
     <Compile Include="Assets\RotateToCamera.cs" />
     <Compile Include="Assets\ShowOnLevelFail.cs" />
     <Compile Include="Assets\ShowOnLevelSuccess.cs" />
+    <Compile Include="Assets\SnakeBody.cs" />
     <Compile Include="Assets\UICreateSpaceshipButton.cs" />
     <Compile Include="Assets\UIDimensionChange.cs" />
+    <Compile Include="Assets\UIDisplayExperience.cs" />
+    <Compile Include="Assets\UIEffectBar.cs" />
+    <Compile Include="Assets\UIEffectDisplay.cs" />
+    <Compile Include="Assets\UIGemLineRenderer.cs" />
     <Compile Include="Assets\UIGemPanelController.cs" />
     <Compile Include="Assets\UIHotkeyDisplay.cs" />
     <Compile Include="Assets\UIHotkeyPopup.cs" />
     <Compile Include="Assets\UIHotkeySlot.cs" />
+    <Compile Include="Assets\UIInput.cs" />
     <Compile Include="Assets\UISaveFileBinDrop.cs" />
     <Compile Include="Assets\UISaveFileDisplay.cs" />
     <Compile Include="Assets\UISwitch.cs" />
@@ -1230,6 +1249,16 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity2018/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{9749767F-6300-0E70-0966-2A16B3B92000}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{EAEF6EB4-073C-0DF6-7278-C4A63EE41F20}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

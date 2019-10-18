@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 405424113, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.modtypes.skills.damage
+  m_EditorClassIdentifier: 
+  m_Identifier: core.modtypes.skills.damage
+  m_Overrides: 0
+  m_Priority: 0
+  m_RoundDown: 0
+  m_AlwaysTakeMax: 1
+  m_CanGetHigherThanCalculated: 0
+  m_MinValue: -3.4028235e+38
+  m_MaxValue: 3.4028235e+38
+  m_IsVisible: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_ModTypeFormatters:
+  - {fileID: 11400000, guid: bb9f9c237c3d639468d1e058b4356217, type: 2}
+  - {fileID: 11400000, guid: aee013d805f65fc49b83d5623e2f01ed, type: 2}
+  m_ModActionCollection: {fileID: 11400000, guid: 36c00633288652540b9b5df80512d1f3,
+    type: 2}

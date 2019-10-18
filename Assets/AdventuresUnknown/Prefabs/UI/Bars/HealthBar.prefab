@@ -95,7 +95,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 23.8
+  m_fontSize: 23.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 4871494914436674158}
   - component: {fileID: 1739565074617544128}
   - component: {fileID: 2015086636411603532}
+  - component: {fileID: 8146115563350496104}
   - component: {fileID: 3100720402622709578}
   m_Layer: 5
   m_Name: Border
@@ -508,6 +509,21 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8146115563350496104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488766457893715474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!114 &3100720402622709578
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,11 +17,14 @@ MonoBehaviour:
   m_Size: 30
   m_ItemStacks:
   - m_ItemIdentifier:
-      m_Identifier: core.items.equipment.basic
+      m_Identifier: core.items.equipment.lifewing1
     m_PowerLevel: 0
     m_Amount: 1
+    m_ItemLevel: 0
     m_ImplicitMods:
-    - m_Value: 5
+    - m_Value: 17
+      m_ModIdentifier:
+        m_Identifier: core.modtypes.ship.life.flat.implicits.t1
       m_BasicModBaseIdentifier:
         m_Identifier: core.modtypes.ship.life.flat
     m_ExplicitMods: []
@@ -29,173 +32,207 @@ MonoBehaviour:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 1
+    m_ItemLevel: 0
+    m_ImplicitMods: []
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: core.items.equipment.energyregenshield1
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ItemLevel: 2
+    m_ImplicitMods:
+    - m_Value: 3
+      m_ModIdentifier:
+        m_Identifier: core.modtypes.ship.energyregen.flat.implicits.t1
+      m_BasicModBaseIdentifier:
+        m_Identifier: core.modtypes.ship.energyregen.flat
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: 
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 1
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 1
+    m_ItemLevel: 0
+    m_ImplicitMods: []
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: 
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ItemLevel: 0
+    m_ImplicitMods: []
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: 
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
+    m_ImplicitMods: []
+    m_ExplicitMods: []
+  - m_ItemIdentifier:
+      m_Identifier: 
+    m_PowerLevel: 0
+    m_Amount: 1
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
   - m_ItemIdentifier:
       m_Identifier: 
     m_PowerLevel: 0
     m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
-    m_ImplicitMods: []
-    m_ExplicitMods: []
-  - m_ItemIdentifier:
-      m_Identifier: 
-    m_PowerLevel: 0
-    m_Amount: 0
+    m_ItemLevel: 0
     m_ImplicitMods: []
     m_ExplicitMods: []
