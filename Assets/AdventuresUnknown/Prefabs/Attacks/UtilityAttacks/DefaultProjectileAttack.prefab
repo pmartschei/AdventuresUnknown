@@ -125,6 +125,11 @@ PrefabInstance:
       propertyPath: m_TrailRenderer
       value: 
       objectReference: {fileID: 7649970170255362307}
+    - target: {fileID: 2358850379799127363, guid: a44d442b597a7504993ed2657be0431f,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2033000609637708804, guid: a44d442b597a7504993ed2657be0431f,
         type: 3}
       propertyPath: m_Emitting

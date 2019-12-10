@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnTextChange:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &756284146962582834
 GameObject:
@@ -268,13 +268,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 756284146962582834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94791593fa7c2747bc0d2aaabf2a2d0, type: 3}
+  m_Script: {fileID: 11500000, guid: e580d9d98c621304f96fc582a539c472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: slot_1
+  m_Identifier: 
   m_HotkeyData:
-    m_Identifier: core.datas.hotkeys
-  m_Hotkey: 49
+    m_Identifier: empty_identifier
+  m_Hotkey: 32
   m_HotkeyText: {fileID: 1656146645217880532}
   m_ActiveGemDisplay: {fileID: 55679315093644416}
   m_CooldownImage: {fileID: 7274681874655219113}
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_OnTextChange:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1787101977743260818
 GameObject:

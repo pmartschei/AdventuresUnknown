@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5343881120567926796}
   - component: {fileID: 1321208705648398205}
   - component: {fileID: 5813494165905408176}
+  - component: {fileID: 4896068276700084898}
   m_Layer: 5
   m_Name: Prefab
   m_TagString: Untagged
@@ -169,11 +170,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1348542154354492663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a862d57523a874a9f84cbf0e2abc98, type: 3}
+  m_Script: {fileID: 11500000, guid: f04dea89c243cc2489a206724acea163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Image: {fileID: 5343881120567926796}
   m_Source: {fileID: 3887471811345031232}
+  m_Tooltip: {fileID: 4896068276700084898}
 --- !u!114 &5813494165905408176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +240,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4896068276700084898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348542154354492663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1435824247, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Tooltip: {fileID: 9026174419674494326, guid: 8aba47b69f08da54ba2114d4edf0f8c8,
+    type: 3}
+  m_UpdateEveryFrame: 0
+  m_TooltipAnchor: 7
+  m_Offset: {x: 0, y: 0}
+  m_UseMousePosition: 0
+  m_RectAnchor: 1
 --- !u!1 &6166824447148749575
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +396,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: -10}
+  m_SizeDelta: {x: -6, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8569639946748290417
 CanvasRenderer:
@@ -540,7 +561,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8054717016327997745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c58bf3e3995af74f9a5e9a7f19d233c, type: 3}
+  m_Script: {fileID: 11500000, guid: 684e8611455721d4a86f862c6565f264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HotkeyDisplayPrefab: {fileID: 1321208705648398205}

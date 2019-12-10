@@ -15,6 +15,20 @@ MonoBehaviour:
   m_CustomName: esm_snipermovement
   m_MainStateSO: {fileID: 11400000, guid: 25e6c3fe10e43064bb5e4a4379e11a86, type: 2}
   m_InitialStateSO: {fileID: 11400000, guid: 25e6c3fe10e43064bb5e4a4379e11a86, type: 2}
+--- !u!136 &6627374655939197415
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7083158684722429087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.0000002
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1069186761841176794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,13 +108,13 @@ PrefabInstance:
     - target: {fileID: 3134632561253595595, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7743379150074491770, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 3126dd8bfdc9a684eac327107bed239d, type: 2}
+      objectReference: {fileID: 9100000, guid: bb66a2c40d859144fa9488b5e7ce625a, type: 2}
     - target: {fileID: 671970134665667057, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_MainStateSO
@@ -171,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 7825827862481308741, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6727752346886843786, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
@@ -246,3 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 80090243, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7083158684722429087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7825827862481308741, guid: 04493b504c0707c408814a5adde1253a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1069186761841176794}
+  m_PrefabAsset: {fileID: 0}

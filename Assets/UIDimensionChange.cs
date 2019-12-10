@@ -1,4 +1,4 @@
-﻿using AdventuresUnknownSDK.Core.Utils.Events;
+﻿using AdventuresUnknownSDK.Core.Utils.UnityEvents;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

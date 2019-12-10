@@ -15,9 +15,9 @@ MonoBehaviour:
   m_Identifier: core.datas.vendor
   m_Overrides: 0
   m_DropTable:
-    m_Identifier: core.dt.common
+    m_Identifier: core.dt.vendor
   m_Inventory:
     m_Identifier: core.inventories.vendor
-  m_Seed: 1247141357
-  m_SlotsBought: 16000000
-  m_PlayerLevel: 14
+  m_Seed: 0
+  m_SlotsBought: 
+  m_PlayerLevel: 0

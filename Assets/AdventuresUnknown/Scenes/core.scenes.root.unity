@@ -261,6 +261,7 @@ MonoBehaviour:
   m_LocalizationsManager: {fileID: 88651299}
   m_PlayerManager: {fileID: 88651302}
   m_ModifierManager: {fileID: 88651308}
+  m_GameSettingsManager: {fileID: 0}
 --- !u!114 &88651301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,8 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5675d8cf2c4534f85d7aa9b043af44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CalculationAction: {fileID: 11400000, guid: 3547fe438fd1e4243bb5267728106ff0,
-    type: 2}
+  m_ImmediateAction: {fileID: 11400000, guid: 3547fe438fd1e4243bb5267728106ff0, type: 2}
   m_TickAction: {fileID: 11400000, guid: 09198e8f99e09f8458bdd01e02035284, type: 2}
   m_DeathAction: {fileID: 11400000, guid: d5ee8bf84f649fc4c8f5b9678554f130, type: 2}
   m_PostDeathAction: {fileID: 11400000, guid: e10e31850a10eb34ab576977ba179b11, type: 2}
@@ -442,6 +442,7 @@ MonoBehaviour:
     type: 2}
   m_AttackGenerationAction: {fileID: 11400000, guid: e486667adf61da64aa5e7a931c3e6672,
     type: 2}
+  m_AuraApplyAction: {fileID: 11400000, guid: 6cc7f0d3988697c45831d197cc2af9a8, type: 2}
 --- !u!114 &88651312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &463563063
 Transform:
   m_ObjectHideFlags: 0
@@ -803,7 +804,7 @@ MonoBehaviour:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.movementspeed.flat
-    m_Value: 10
+    m_Value: 8
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -814,7 +815,7 @@ MonoBehaviour:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.life.flat
-    m_Value: 100
+    m_Value: 10055
     m_IsCurve: 1
     m_ValueCurve:
       serializedVersion: 2
@@ -879,17 +880,17 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 1
-        value: 3
+        value: 7
         inSlope: 1
-        outSlope: 0.049999997
+        outSlope: 0.01010101
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 100
-        value: 7.95
-        inSlope: 0.049999997
+        value: 8
+        inSlope: 0.01010101
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -930,7 +931,7 @@ MonoBehaviour:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.ship.acceleration.flat
-    m_Value: 20
+    m_Value: 10
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -1097,7 +1098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1765519231
 Transform:
   m_ObjectHideFlags: 0

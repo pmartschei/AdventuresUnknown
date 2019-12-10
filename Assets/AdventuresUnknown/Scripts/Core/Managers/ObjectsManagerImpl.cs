@@ -23,6 +23,7 @@ using AdventuresUnknownSDK.Core.Objects.Levels;
 using AdventuresUnknownSDK.Core.Objects.Mods.Actions;
 using AdventuresUnknownSDK.Core.Objects.Effects;
 using AdventuresUnknownSDK.Core.Objects.Experience;
+using AdventuresUnknownSDK.Core.Objects.Sounds;
 
 namespace AdventuresUnknown.Core.Managers
 {
@@ -43,6 +44,7 @@ namespace AdventuresUnknown.Core.Managers
         }
         public void Init()
         {
+            LoadCoreObjects<SoundGroup>();
             LoadCoreObjects<ActionType>();
             LoadCoreObjects<Tag>();
             LoadCoreObjects<LevelGeneratorDescription>();

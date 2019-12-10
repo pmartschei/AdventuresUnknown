@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.english.supportgems
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.items.gems.support.addedfire.description
+    m_String: Supported Skills deal additional Fire Damage.
+  - m_Identifier: core.items.gems.support.addedfire.name
+    m_String: Added Fire Support
+  - m_Identifier: core.items.gems.support.addedice.description
+    m_String: Supported Skills deal additional Ice Damage.
+  - m_Identifier: core.items.gems.support.addedice.name
+    m_String: Added Ice Support
+  - m_Identifier: core.items.gems.support.addedlightning.description
+    m_String: Supported Skills deal additional Lightning Damage.
+  - m_Identifier: core.items.gems.support.addedlightning.name
+    m_String: Added Lightning Support
+  - m_Identifier: core.items.gems.support.bloodmagic.description
+    m_String: Converts Energy Cost to Life Cost. Supported Skills require Life Cost
+      on Activation.
+  - m_Identifier: core.items.gems.support.bloodmagic.name
+    m_String: Blood Magic Support
+  - m_Identifier: core.items.gems.support.charged.name
+    m_String: Charged Support
+  - m_Identifier: core.items.gems.support.charged.description
+    m_String: Supported Skills will be charged. Charged Skills deal more Lightning
+      Damage but less Ice Damage and Fire Damage.
+  - m_Identifier: core.items.gems.support.dangerousarea.name
+    m_String: Dangerous Area Support
+  - m_Identifier: core.items.gems.support.dangerousarea.description
+    m_String: Supported Area Skills deal more Damage.
+  - m_Identifier: core.items.gems.support.dangerousprojectiles.name
+    m_String: Dangerous Projectiles Support
+  - m_Identifier: core.items.gems.support.dangerousprojectiles.description
+    m_String: Supported Projectile Skills deal more Damage.
+  - m_Identifier: core.items.gems.support.fasterattacks.name
+    m_String: Faster Attacks Support
+  - m_Identifier: core.items.gems.support.fasterattacks.description
+    m_String: Supported Skills attack faster.
+  - m_Identifier: core.items.gems.support.fasterprojectiles.name
+    m_String: Faster Projectiles Support
+  - m_Identifier: core.items.gems.support.fasterprojectiles.description
+    m_String: Projectiles from supported Projectile Skills travel faster.
+  - m_Identifier: core.items.gems.support.greatermultipleprojectiles.name
+    m_String: Greater Multiple Projectiles Support
+  - m_Identifier: core.items.gems.support.greatermultipleprojectiles.description
+    m_String: Supported Skills fire additional Projectiles.
+  - m_Identifier: core.items.gems.support.icebound.name
+    m_String: Icebound Support
+  - m_Identifier: core.items.gems.support.icebound.description
+    m_String: Supported Skills will be icebound. Icebound Skills deal more Ice Damage
+      but less Lightning Damage and Fire Damage.
+  - m_Identifier: core.items.gems.support.increasedaoe.name
+    m_String: Increased Area Support
+  - m_Identifier: core.items.gems.support.increasedaoe.description
+    m_String: Supported Area Skills have increased size.
+  - m_Identifier: core.items.gems.support.increasedcriticalchance.name
+    m_String: Increased Critical Chance Support
+  - m_Identifier: core.items.gems.support.increasedcriticalchance.description
+    m_String: Supported Skills have additional Critical Chance.
+  - m_Identifier: core.items.gems.support.increasedcriticaldamage.name
+    m_String: Increased Critical Damage Support
+  - m_Identifier: core.items.gems.support.increasedcriticaldamage.description
+    m_String: Supported Skills deal additional Critical Damage.
+  - m_Identifier: core.items.gems.support.increasedduration.name
+    m_String: Increased Duration
+  - m_Identifier: core.items.gems.support.increasedduration.description
+    m_String: Supported Duration Skills have increased Duration.
+  - m_Identifier: core.items.gems.support.inflamed.name
+    m_String: Inflamed Support
+  - m_Identifier: core.items.gems.support.inflamed.description
+    m_String: Supported Skills will be inflamed. Inflamed Skills deal more Fire Damage
+      but less Ice Damage and Lightning Damage.
+  - m_Identifier: core.items.gems.support.lessermultipleprojectiles.name
+    m_String: Lesser Multiple Projectiles Support
+  - m_Identifier: core.items.gems.support.lessermultipleprojectiles.description
+    m_String: Supported Skills fire additional Projectiles.
+  - m_Identifier: core.items.gems.support.pierce.name
+    m_String: Pierce Support
+  - m_Identifier: core.items.gems.support.pierce.description
+    m_String: Projectiles from supported Skills will have additional Pierce.
+  - m_Identifier: core.items.gems.support.reducedaoe.name
+    m_String: Reduced Area Support
+  - m_Identifier: core.items.gems.support.reducedaoe.description
+    m_String: Supported Area Skills have reduced size. Supported Area Skills deal
+      more Damage.
+  - m_Identifier: core.items.gems.support.reducedcost.name
+    m_String: Reduced Cost Support
+  - m_Identifier: core.items.gems.support.reducedcost.description
+    m_String: Supported Skills have reduced Energy Cost.
+  - m_Identifier: core.items.gems.support.slowerprojectiles.name
+    m_String: Slower Projectiles Support
+  - m_Identifier: core.items.gems.support.slowerprojectiles.description
+    m_String: Projectiles from supported Projectile Skills travel slower. Supported
+      Projectiles Skills deal more Damage.
+  - m_Identifier: core.items.gems.support.tenaciousmight.name
+    m_String: Tenacious Might Support
+  - m_Identifier: core.items.gems.support.tenaciousmight.description
+    m_String: Supported Skills Critical Chance is reduced to 0%. Supported Skills
+      deal more Damage.

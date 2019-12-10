@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnTextChange:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_LocalizationString:
     m_LocalizedIdentifier: core.ui.leveldisplay.waves
@@ -837,10 +837,10 @@ RectTransform:
   m_Father: {fileID: 7151854928268042117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 113.515, y: -13.965}
+  m_SizeDelta: {x: 227.03, y: 27.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8213669606905186126
 CanvasRenderer:
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_OnTextChange:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_LocalizationString:
     m_LocalizedIdentifier: core.ui.leveldisplay.delay
@@ -1003,7 +1003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7151854928268042117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1019,10 +1019,10 @@ RectTransform:
   m_Father: {fileID: 224318076266720406}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 113.515, y: -69.825}
+  m_SizeDelta: {x: 227.03, y: 27.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7672349700399410589
 CanvasRenderer:
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_OnLocalize:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &6325036727855251599
 GameObject:
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_OnTextChange:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: AdventuresUnknownSDK.Core.Utils.Events.StringEvent, AdventuresUnknownRuntime,
+    m_TypeName: AdventuresUnknownSDK.Core.Utils.UnityEvents.StringEvent, AdventuresUnknownRuntime,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1055323541508246572
 PrefabInstance:

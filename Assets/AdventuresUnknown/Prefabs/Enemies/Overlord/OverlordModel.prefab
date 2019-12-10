@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 3134632561253595595, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7743379150074491770, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 7825827862481308741, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6727752346886843786, guid: 04493b504c0707c408814a5adde1253a,
         type: 3}
@@ -412,6 +412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainMuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452496402693607949, guid: d2740d8f3e580094f9a585e326daf3df,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2740d8f3e580094f9a585e326daf3df, type: 3}

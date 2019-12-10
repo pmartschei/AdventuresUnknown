@@ -1,10 +1,12 @@
 ﻿using AdventuresUnknownSDK.Core.Managers;
-using AdventuresUnknownSDK.Core.Utils.Events;
+using AdventuresUnknownSDK.Core.Utils.UnityEvents;
 using AdventuresUnknownSDK.Core.Utils.Identifiers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AdventuresUnknownSDK.Core.UI.Tooltip;
+using System.Text;
 
 public class UIDisplayExperience : MonoBehaviour
 {

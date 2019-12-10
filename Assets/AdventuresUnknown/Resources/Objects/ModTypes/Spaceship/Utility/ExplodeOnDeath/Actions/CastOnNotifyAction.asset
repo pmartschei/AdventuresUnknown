@@ -16,4 +16,4 @@ MonoBehaviour:
   m_ActionType: {fileID: 11400000, guid: e10e31850a10eb34ab576977ba179b11, type: 2}
   m_ActiveGemIdentifier:
     m_Identifier: core.items.gems.exploder.defaultattack
-  m_Level: 0
+  m_Level: -1

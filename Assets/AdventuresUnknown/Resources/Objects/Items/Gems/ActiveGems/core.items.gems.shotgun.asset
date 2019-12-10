@@ -29,7 +29,7 @@ MonoBehaviour:
   m_DefaultPowerLevel: 0
   m_ItemTypeIdentifier:
     m_Identifier: core.itemtypes.gem
-  m_Sprite: {fileID: 21300000, guid: 654660aa796970e4ebe0b3c7a400dae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f5ae7c65d3486c498c325817b0b3e43, type: 3}
   m_ItemStackDisplay: {fileID: 2739460991793205617, guid: 5c03624604db0934eb30f90420465c3a,
     type: 3}
   m_Tags:
@@ -46,7 +46,7 @@ MonoBehaviour:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.skills.projectilespeed.flat
-    m_Value: 13
+    m_Value: 14
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -207,3 +207,4 @@ MonoBehaviour:
   m_GenericAttack: {fileID: 101771605833534626, guid: 56ecaf5cfcd92e849830574ced9cc424,
     type: 3}
   m_SecondaryActiveGems: []
+  m_DisplayPrefab: {fileID: 0}

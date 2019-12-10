@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{771931E7-8F84-B389-6A02-04D98DE57003}</ProjectGuid>
+    <ProjectGuid>{2EFB33B8-7F77-3CCE-D379-C521A28F9E86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -97,6 +97,7 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\LoadSceneCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\SaveCommand.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Commands\SpawnEnemyCommand.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Enemies\DistributedSpawnObject.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Exploder\ExploderAttackState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\EntityStates\Sniper\SniperAttackState.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIActiveGemDisplay.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UICraftingOptionDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UICraftingSlotDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIEntityDisplay.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIEntityDisplayRaw.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIEquipmentDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIGemDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Items\UIHotkeyActiveGemDisplay.cs" />
@@ -123,6 +125,12 @@
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIHangarHeaderPlayer.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorBuyController.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Hangar\UIVendorSlotDrop.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Play\ActiveGemData.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Play\ActiveGemDataTooltip.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Play\UIHotkeyDisplay.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Play\UIHotkeyPopup.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\Play\UIHotkeySlot.cs" />
+    <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIExperienceTooltipCallback.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIGameModeDisplay.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UIPlayMenu.cs" />
     <Compile Include="Assets\AdventuresUnknown\Scripts\Core\Logic\UITitleSceneMenu.cs" />
@@ -351,28 +359,11 @@
     <Compile Include="Assets\LoadAssetBundle.cs" />
     <Compile Include="Assets\LoadNextLevels.cs" />
     <Compile Include="Assets\LookAtMouse.cs" />
-    <Compile Include="Assets\PandaBehaviour\Core\PandaBehaviour.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\00_ChangeColor\Assets\MyCube.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\01_Move\Assets\Move.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\Computer.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\Dialogue.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\Player.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\AI.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\AIVision.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Bullet.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\BulletImpact.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\FollowCamera.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\HUD.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Patroller.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\ShooterGameController.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\TriggerType.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Unit.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\UnitExplosion.cs" />
-    <Compile Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\WaypointPath.cs" />
     <Compile Include="Assets\ParticleSystemAutoDestroy.cs" />
     <Compile Include="Assets\RotateToCamera.cs" />
     <Compile Include="Assets\ShowOnLevelFail.cs" />
     <Compile Include="Assets\ShowOnLevelSuccess.cs" />
+    <Compile Include="Assets\ShrinkOverSpawnCount.cs" />
     <Compile Include="Assets\SnakeBody.cs" />
     <Compile Include="Assets\UICreateSpaceshipButton.cs" />
     <Compile Include="Assets\UIDimensionChange.cs" />
@@ -381,9 +372,6 @@
     <Compile Include="Assets\UIEffectDisplay.cs" />
     <Compile Include="Assets\UIGemLineRenderer.cs" />
     <Compile Include="Assets\UIGemPanelController.cs" />
-    <Compile Include="Assets\UIHotkeyDisplay.cs" />
-    <Compile Include="Assets\UIHotkeyPopup.cs" />
-    <Compile Include="Assets\UIHotkeySlot.cs" />
     <Compile Include="Assets\UIInput.cs" />
     <Compile Include="Assets\UISaveFileBinDrop.cs" />
     <Compile Include="Assets\UISaveFileDisplay.cs" />
@@ -556,7 +544,6 @@
     <Compile Include="Assets\unity-ui-extensions\Scripts\VR Extensions\VRCursor.cs" />
     <Compile Include="Assets\unity-ui-extensions\Scripts\VR Extensions\VRInputModule.cs" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Sprites\Sprites-Diffuse.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Patroller.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\MKGlowStandard.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-Glossy.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Common.hlsl" />
@@ -565,22 +552,15 @@
     <None Include="Assets\unity-ui-extensions\Shaders\UIAdditive.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-Glossy.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Composite.hlsl" />
-    <None Include="Assets\PandaBehaviour\Examples\01_Move\Assets\Move.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Particle\MK_Particle AddMultiply.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\TagDialogue.BT.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\_MK\MKGlowFree\Legacy_3_0_7\ReadMe.txt" />
-    <None Include="Assets\PandaBehaviour\Core\PandaBehaviour.xml" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
-    <None Include="Assets\PandaBehaviour\README.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Particle\MK_Particle Alpha Blend.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Player.BT.txt" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Sniper.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-DiffuseBumped.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-DiffuseBumpSpec.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Effect\MKGlowSM30.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\00_ChangeColor\Assets\ChangeColor.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Unlit-Detail.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Effect\MKGlowSM40.shader" />
@@ -593,7 +573,6 @@
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Transparent\MK_Transparent-DiffuseBumpSpec.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\AdventuresUnknown\Textures\Backgrounds\License free.txt" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\Hunter.BT.txt" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Downsample.hlsl" />
@@ -602,7 +581,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\Sprites\Sprites-Diffuse.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Particle\MK_Particle Multiply.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\AI.BT.lib.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-DiffuseBumpSpec.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Effect\MKGlowSM20.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-DiffuseBumpSpec.shader" />
@@ -610,14 +588,11 @@
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-DiffuseBumped.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Copy.hlsl" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-Glossy.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\Computer.BT.txt" />
-    <None Include="Assets\PandaBehaviour\Examples\03_Shooter\Assets\GameController.BT.txt" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Multiply.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Alpha Blend.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\UI.hlsl" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Unlit-TextDetail.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIImageCrop.shader" />
-    <None Include="Assets\FlappyBirdExample\Sound\Sources.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -633,7 +608,6 @@
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Lit-Detail.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-DefaultFont.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\PlayTag.commented.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\Debug.hlsl" />
     <None Include="Assets\AdventuresUnknown\Textures\vector-cartoon-corridor-spaceship-datacenter-with-server-racks\License free.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
@@ -650,7 +624,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Inc\CompositeSample.hlsl" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\Sprites\Sprites-Default.shader" />
-    <None Include="Assets\PandaBehaviour\Examples\02_PlayTag\Assets\PlayTag.BT.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Transparent\MK_Transparent-Glossy.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Default.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
@@ -662,25 +635,24 @@
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-DiffuseBumped.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Lit-Transparent.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\PandaBehaviour\ChangeLog.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsLuminance\UI\UI-Unlit-Transparent.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\VariantsSelective\Sprites\Sprites-Default.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/Unity/DllImportTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>F:/Unity/DllImportTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>F:/Unity/DllImportTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/Unity/DllImportTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>F:/Unity/DllImportTest/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity2018/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -884,25 +856,22 @@
       <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="AdventuresUnknownEditor">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/AdventuresUnknownEditor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/AdventuresUnknownEditor.dll</HintPath>
     </Reference>
     <Reference Include="AdventuresUnknownRuntime">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/AdventuresUnknownRuntime.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/AdventuresUnknownRuntime.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>F:/Unity/DllImportTest/Assets/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity2018/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -1252,11 +1221,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{9749767F-6300-0E70-0966-2A16B3B92000}</Project>
+      <Project>{093AB3FC-414A-DA9D-040E-620BD56AB50C}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{EAEF6EB4-073C-0DF6-7278-C4A63EE41F20}</Project>
+      <Project>{CF27113E-2D42-7303-565E-9EA407F4348D}</Project>
       <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>

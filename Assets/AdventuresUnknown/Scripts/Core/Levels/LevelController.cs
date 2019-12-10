@@ -45,7 +45,7 @@ namespace AdventuresUnknown.Core.Levels
         }
         private void Update()
         {
-            if (GameSettingsManager.IsPaused) return;
+            if (LevelManager.IsPaused) return;
             if (PlayerManager.PlayerController == null)
             {
                 LevelManager.IsPaused = true;

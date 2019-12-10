@@ -19,7 +19,7 @@ MonoBehaviour:
     m_LocalizedIdentifier: core.mtf.skilleffects.heal.description
   m_AdditionalFormat:
     m_Pre:
-      m_LocalizedIdentifier: core.mft.default.flatpre
+      m_LocalizedIdentifier: core.mtf.default.flatpre
     m_Main:
       m_LocalizedIdentifier: core.mtf.default.flatmain
     m_Post:

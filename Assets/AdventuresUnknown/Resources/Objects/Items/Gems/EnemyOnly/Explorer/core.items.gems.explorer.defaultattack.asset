@@ -736,7 +736,7 @@ MonoBehaviour:
   - m_InspectorElementName: 
     m_ModBaseIdentifier:
       m_Identifier: core.modtypes.skills.duration.flat
-    m_Value: 3
+    m_Value: 2
     m_IsCurve: 0
     m_ValueCurve:
       serializedVersion: 2
@@ -744,7 +744,8 @@ MonoBehaviour:
       m_PreInfinity: 0
       m_PostInfinity: 0
       m_RotationOrder: 0
-  m_DisplayMods: []
+  m_DisplayMods: {fileID: 0}
   m_GenericAttack: {fileID: 1394900525836481362, guid: d4e505e1040de804cbe77bf71b0b7388,
     type: 3}
   m_SecondaryActiveGems: []
+  m_DisplayPrefab: {fileID: 0}

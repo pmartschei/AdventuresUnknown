@@ -11,7 +11,7 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
 {
     public class ActionTypeManagerImpl : ActionTypeManager
     {
-        [SerializeField] private ActionType m_CalculationAction = null;
+        [SerializeField] private ActionType m_ImmediateAction = null;
         [SerializeField] private ActionType m_TickAction = null;
         [SerializeField] private ActionType m_DeathAction = null;
         [SerializeField] private ActionType m_PostDeathAction = null;
@@ -25,9 +25,10 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         [SerializeField] private ActionType m_AttackCooldownApplyAction = null;
         [SerializeField] private ActionType m_AttackApplyAction = null;
         [SerializeField] private ActionType m_AttackGenerationAction = null;
+        [SerializeField] private ActionType m_AuraApplyAction = null;
 
         #region Properties
-        protected override ActionType CalculationImpl { get => m_CalculationAction; set => m_CalculationAction = value; }
+        protected override ActionType ImmediateImpl { get => m_ImmediateAction; set => m_ImmediateAction = value; }
         protected override ActionType TickImpl { get => m_TickAction; set => m_TickAction = value; }
         protected override ActionType DeathImpl { get => m_DeathAction; set => m_DeathAction = value; }
         protected override ActionType PostDeathImpl { get => m_PostDeathAction; set => m_PostDeathAction = value; }
@@ -41,6 +42,7 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Managers
         protected override ActionType AttackCooldownApplyImpl { get => m_AttackCooldownApplyAction; set => m_AttackCooldownApplyAction = value; }
         protected override ActionType AttackApplyImpl { get => m_AttackApplyAction; set => m_AttackApplyAction = value; }
         protected override ActionType AttackGenerationImpl { get => m_AttackGenerationAction; set => m_AttackGenerationAction = value; }
+        protected override ActionType AuraApplyImpl { get => m_AuraApplyAction; set => m_AuraApplyAction = value; }
         #endregion
 
         #region Methods

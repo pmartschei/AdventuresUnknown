@@ -16,4 +16,4 @@ MonoBehaviour:
   m_Overrides: 0
   m_ActiveGemsIdentifiers:
   - m_Identifier: core.items.gems.terrorspawn.defaultattack
-  - m_Identifier: core.items.gems.basicshot
+  - m_Identifier: core.items.gems.basic

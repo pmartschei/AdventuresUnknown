@@ -19,13 +19,14 @@ public class UIWaveDisplay : MonoBehaviour
             bool flag = level.NextWave == null;
             if (m_WaveText)
             {
-                m_WaveText.SetText(level.CurrentWave);
+                m_WaveText.SetText(level.CurrentWave + " of " + level.WaveCount);
             }
-            if (m_TimerText)
+            
+            /*if (m_TimerText)
             {
                 m_TimerText.gameObject.SetActive(!flag);
                 m_TimerText.SetText(level.CurrentWaveTimer);
-            }
+            }*/
             if (m_RemainingText)
             {
                 m_RemainingText.gameObject.SetActive(flag);

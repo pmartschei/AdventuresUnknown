@@ -3,6 +3,7 @@ using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Currencies;
 using AdventuresUnknownSDK.Core.Objects.Datas;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
+using AdventuresUnknownSDK.Core.Objects.Items;
 using AdventuresUnknownSDK.Core.UI.Interfaces;
 using AdventuresUnknownSDK.Core.UI.Items;
 using AdventuresUnknownSDK.Core.UI.Items.Interfaces;
@@ -64,25 +65,36 @@ namespace AdventuresUnknown.Core.Logic.Hangar
                 m_SelectedItem = inventorySlot.Inventory.Items[inventorySlot.Slot];
                 break;
             }
-            CurrencyValue cv = new CurrencyValue();
-            cv.Currency.Identifier = "core.currencies.gold";
-            cv.Currency.ConsistencyCheck();
-            cv.Value = 0;
             if (m_SelectedItem != null && !m_SelectedItem.IsEmpty)
             {
-                cv = m_SelectedItem.Item.CurrencyValue;
                 m_CurrencyText.gameObject.SetActive(true);
             }
             else
             {
                 m_CurrencyText.gameObject.SetActive(false);
             }
+            CurrencyValue cv = GetItemValue(m_SelectedItem);
             if (m_CurrencyText)
             {
-                m_CurrencyText.SetText(cv.Value * (m_SelectedItem != null ? m_SelectedItem.ExplicitMods.Length : 0));
+                m_CurrencyText.SetText(cv.Value);
                 m_CurrencyText.SetCurrency(cv.Currency.Object);
             }
             m_BuyButton.interactable = PlayerCanBuySelectedItem();
+        }
+
+        public CurrencyValue GetItemValue(ItemStack itemStack)
+        {
+            CurrencyValue cv = new CurrencyValue();
+            cv.Currency.Identifier = "core.currencies.gold";
+            cv.Currency.ConsistencyCheck();
+            cv.Value = 0;
+            if (itemStack == null) return cv;
+            cv = itemStack.Item.CurrencyValue;
+            if (!(m_SelectedItem.Item is Gem))
+            {
+                cv.Value = cv.Value * m_SelectedItem.ExplicitMods.Length;
+            }
+            return cv;
         }
         public void BuySelectedItem()
         {
@@ -98,8 +110,8 @@ namespace AdventuresUnknown.Core.Logic.Hangar
             {
                 m_VendorData.Object.SlotsBought.Add(m_SelectedInventorySlot.Slot);
             }
-            CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
-            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value*m_SelectedItem.ExplicitMods.Length);
+            CurrencyValue cv = GetItemValue(m_SelectedItem);
+            PlayerManager.PlayerWallet.AddValue(cv.Currency.Identifier, -cv.Value);
             m_SelectedInventorySlot.Inventory.RemoveItemStack(m_SelectedInventorySlot.Slot);
 
             inventory.AddItemStack(newItemStack);
@@ -111,7 +123,7 @@ namespace AdventuresUnknown.Core.Logic.Hangar
         private bool PlayerCanBuySelectedItem()
         {
             if (m_SelectedItem == null || m_SelectedItem.IsEmpty) return false;
-            CurrencyValue cv = m_SelectedItem.Item.CurrencyValue;
+            CurrencyValue cv = GetItemValue(m_SelectedItem);
 
             if (PlayerManager.PlayerWallet.GetValue(cv.Currency.Identifier) < cv.Value) return false;
 

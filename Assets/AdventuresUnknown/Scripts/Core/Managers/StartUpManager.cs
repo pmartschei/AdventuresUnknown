@@ -13,6 +13,7 @@ namespace AdventuresUnknown.Core.Managers
         [SerializeField] private LocalizationsManagerImpl m_LocalizationsManager = null;
         [SerializeField] private PlayerManagerImpl m_PlayerManager = null;
         [SerializeField] private ModifierManagerImpl m_ModifierManager = null;
+        [SerializeField] private GameSettingsManagerImpl m_GameSettingsManager = null;
         // Use this for initialization
         void OnEnable()
         {

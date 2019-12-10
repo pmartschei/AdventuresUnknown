@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 857626362, guid: 329e426020b6773409f1104d1e78474d, type: 3}
   m_Name: ExplorerWanderAroundTargetState
   m_EditorClassIdentifier: 
-  m_MaxMoveRadius: 5
+  m_MaxMoveRadius: 10
   m_MinWanderTimer: 1
   m_MaxWanderTimer: 3
   m_RecalcPathCount: 1

@@ -37,3 +37,5 @@ MonoBehaviour:
     m_String: Name
   - m_Identifier: core.ui.title.creation.title
     m_String: New SpaceShip
+  - m_Identifier: core.ui.title.playbutton
+    m_String: Play

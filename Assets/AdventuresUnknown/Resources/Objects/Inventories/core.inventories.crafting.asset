@@ -15,12 +15,16 @@ MonoBehaviour:
   m_Identifier: core.inventories.crafting
   m_Overrides: 0
   m_Size: 1
-  m_GameEvent:
-    m_Identifier: core.gameevent.inventoryupdate
   m_ItemStacks:
   - m_ItemIdentifier:
-      m_Identifier: 
+      m_Identifier: core.items.equipment.lifeshield1
     m_PowerLevel: 0
     m_Amount: 1
-    m_ImplicitMods: []
+    m_ItemLevel: 0
+    m_ImplicitMods:
+    - m_Value: 13
+      m_ModIdentifier:
+        m_Identifier: core.modtypes.ship.life.flat.implicits.t1
+      m_BasicModBaseIdentifier:
+        m_Identifier: core.modtypes.ship.life.flat
     m_ExplicitMods: []

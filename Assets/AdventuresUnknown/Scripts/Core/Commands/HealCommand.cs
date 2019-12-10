@@ -17,6 +17,7 @@ namespace AdventuresUnknown.Core.Commands
         #region Methods
         public HealCommand(string commandName) : base(commandName)
         {
+            
             Usage = "Usage: "+ commandName;
         }
         public override void Evaluate(params string[] parameters)

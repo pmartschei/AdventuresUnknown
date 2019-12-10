@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EAEF6EB4-073C-0DF6-7278-C4A63EE41F20}</ProjectGuid>
+    <ProjectGuid>{CF27113E-2D42-7303-565E-9EA407F4348D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>NavMeshComponents</AssemblyName>
@@ -296,37 +296,31 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="AdventuresUnknownEditor">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/AdventuresUnknownEditor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/AdventuresUnknownEditor.dll</HintPath>
     </Reference>
     <Reference Include="AdventuresUnknownRuntime">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/AdventuresUnknownRuntime.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/AdventuresUnknownRuntime.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>F:/Unity/DllImportTest/Assets/AdventuresUnknown/Plugins/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>F:/Unity/DllImportTest/Assets/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviourEditor">
-      <HintPath>F:/Unity/DllImportTest/Assets/PandaBehaviour/Core/Editor/PandaBehaviourEditor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/AdventuresUnknown/Plugins/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.Mono.Cecil">
-      <HintPath>F:/Unity/DllImportTest/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>F:/Unity/DllImportTest/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>F:/Unity/AdventuresIntoTheUnknown/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity2018/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

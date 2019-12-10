@@ -35,7 +35,16 @@ namespace Assets.AdventuresUnknown.Scripts.Core.Attacks
         protected override void DestroyAttack()
         {
             base.DestroyAttack();
-            ActivateSecondaryActiveGem(0);
+            ulong id = IDManager.GetUniqueID();
+            ActivateSecondaryActiveGem(0, id);
+            ActivateSecondaryActiveGem(1, id);
+        }
+        protected override void AttackUpdate()
+        {
+            base.AttackUpdate();
+            float duration = this.Entity.GetStat("core.modtypes.skills.duration").Percentage;
+            //duration = Math.Max(1, duration);
+            this.Animator.SetFloat("NormalizedTime", 1 - duration);
         }
         protected override void OnAttackHit(HitContext hitContext)
         {

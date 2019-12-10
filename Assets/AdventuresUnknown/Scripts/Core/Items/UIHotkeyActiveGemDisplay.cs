@@ -41,6 +41,17 @@ namespace AdventuresUnknown.Core.Items
             {
                 m_Image.enabled = true;
                 m_Image.sprite = m_LastActiveGem.Sprite;
+                if (m_LastActiveGem is AuraGem)
+                {
+                    if (entity.EntityBehaviour.Entity.GetObject<ActiveGem>(m_LastActiveGem) == m_LastActiveGem)
+                    {
+                        m_Image.color = Color.red;
+                    }
+                    else
+                    {
+                        m_Image.color = Color.white;
+                    }
+                }
             }
             return true;
         }
@@ -50,7 +61,14 @@ namespace AdventuresUnknown.Core.Items
             OnPointerExit(eventData);
             if (m_LastActiveGem == null) return;
             if (!m_LastActiveGem.ItemStackDisplay) return;
-            m_Display = Instantiate(m_DisplayPrefab, transform.root);
+            if (m_LastActiveGem.DisplayPrefab != null)
+            {
+                m_Display = Instantiate(m_LastActiveGem.DisplayPrefab, transform.root);
+            }
+            else
+            {
+                m_Display = Instantiate(m_DisplayPrefab, transform.root);
+            }
             CalculateItemStackPosition(m_Display, eventData.position);
             m_Display.Display(m_LastActiveGem,m_LastEntity, m_LastModTypes);
         }

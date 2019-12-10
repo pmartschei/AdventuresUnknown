@@ -15,5 +15,5 @@ MonoBehaviour:
   m_Identifier: core.agc.terrorling
   m_Overrides: 0
   m_ActiveGemsIdentifiers:
-  - m_Identifier: core.items.gems.basicshot
-  - m_Identifier: core.items.gems.split
+  - m_Identifier: core.items.gems.basic
+  - m_Identifier: core.items.gems.splitshot

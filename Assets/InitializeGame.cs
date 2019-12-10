@@ -1,4 +1,5 @@
 ﻿using AdventuresUnknownSDK.Core.Entities;
+using AdventuresUnknownSDK.Core.Log;
 using AdventuresUnknownSDK.Core.Managers;
 using AdventuresUnknownSDK.Core.Objects.Inventories;
 using AdventuresUnknownSDK.Core.Utils.Identifiers;
@@ -6,6 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 public class InitializeGame : MonoBehaviour
 {
@@ -34,6 +36,14 @@ public class InitializeGame : MonoBehaviour
 
         SceneManager.LoadScene(m_StartingScene);
 
+        //Application.logMessageReceived += Application_logMessageReceived;
+        //GarbageCollector.GCMode = GarbageCollector.Mode.Disabled;
+    }
+
+    private void Application_logMessageReceived(string condition, string stackTrace, LogType type)
+    {
+        GameConsole.LogError(condition);
+        GameConsole.LogError(stackTrace);
     }
 
     private void OnLevelChange(int level)

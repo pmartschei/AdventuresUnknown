@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2362364314832265808}
   - component: {fileID: 6239428963922944625}
   - component: {fileID: 1172225230714316494}
+  - component: {fileID: 1037878610187339101}
   m_Layer: 0
   m_Name: IcyNovaMine
   m_TagString: Untagged
@@ -204,3 +205,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PoolSize: 256
+--- !u!95 &1037878610187339101
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269925932437232176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13eeeb19aa9d5e849bab8a4340b1e3cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

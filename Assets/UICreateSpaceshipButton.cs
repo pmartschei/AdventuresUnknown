@@ -49,7 +49,7 @@ public class UICreateSpaceshipButton : MonoBehaviour
         Inventory gems = ObjectsManager.FindObjectByIdentifier<Inventory>("core.inventories.gems");
         Wallet wallet = ObjectsManager.FindObjectByIdentifier<Wallet>("core.wallets.player");
         wallet.AddValue("core.currencies.gold", 100);
-        gems.SetItemStack(ObjectsManager.FindObjectByIdentifier<Item>("core.items.gems.minigun").CreateItem(),0);
+        gems.SetItemStack(ObjectsManager.FindObjectByIdentifier<Item>("core.items.gems.basic").CreateItem(),0);
         HotkeyData hotkeyData = ObjectsManager.FindObjectByIdentifier<HotkeyData>("core.datas.hotkeys");
         HotkeyDisplayData hotkeyDisplayData = new HotkeyDisplayData();
         hotkeyDisplayData.ActiveGem = gems.Items[0].Item as ActiveGem;

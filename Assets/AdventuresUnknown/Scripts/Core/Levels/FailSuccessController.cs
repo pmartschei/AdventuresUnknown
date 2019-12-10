@@ -38,7 +38,7 @@ namespace AdventuresUnknown.Core.Levels
 
         private void OnFail()
         {
-            PlayerManager.PlayerWallet.AddValue("core.currencies.gold", (int)(PlayerManager.PlayerWallet.GetValue("core.currencies.gold") * 0.8f));
+            PlayerManager.PlayerWallet.AddValue("core.currencies.gold", (int)(PlayerManager.PlayerWallet.GetValue("core.currencies.gold") * -0.1f));
             PlayerManager.Save();
         }
 

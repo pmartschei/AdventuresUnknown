@@ -21,3 +21,5 @@ MonoBehaviour:
     m_String: Hangar
   - m_Identifier: core.ui.close
     m_String: Close
+  - m_Identifier: core.ui.fail.retry
+    m_String: Retry

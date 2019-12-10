@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1088087500, guid: 329e426020b6773409f1104d1e78474d, type: 3}
+  m_Name: core.lt.english.activegems
+  m_EditorClassIdentifier: 
+  m_LanguageIdentifier:
+    m_Identifier: core.languages.english
+  m_LocalizationData:
+  - m_Identifier: core.items.gems.basic.name
+    m_String: Basic Shot
+  - m_Identifier: core.items.gems.basic.description
+    m_String: 
+  - m_Identifier: core.items.gems.heal.name
+    m_String: Heal
+  - m_Identifier: core.items.gems.heal.description
+    m_String: Heal yourself and gain life regeneration.
+  - m_Identifier: core.items.gems.minigun.name
+    m_String: Minigun Shot
+  - m_Identifier: core.items.gems.minigun.description
+    m_String: 
+  - m_Identifier: core.items.gems.shotgun.name
+    m_String: Shotgun Shot
+  - m_Identifier: core.items.gems.shotgun.description
+    m_String: 
+  - m_Identifier: core.items.gems.snipe.name
+    m_String: Snipe Shot
+  - m_Identifier: core.items.gems.snipe.description
+    m_String: 
+  - m_Identifier: core.items.gems.splitshot.name
+    m_String: Split Shot
+  - m_Identifier: core.items.gems.splitshot.description
+    m_String: 
+  - m_Identifier: core.items.gems.energyaura.name
+    m_String: Energy Aura
+  - m_Identifier: core.items.gems.energyaura.description
+    m_String: Gain energy regeneration but lose damage.

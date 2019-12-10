@@ -15,4 +15,4 @@ MonoBehaviour:
   m_Identifier: core.agc.sniper
   m_Overrides: 0
   m_ActiveGemsIdentifiers:
-  - m_Identifier: core.items.gems.basicshot
+  - m_Identifier: core.items.gems.snipe

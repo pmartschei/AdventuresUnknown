@@ -29,7 +29,7 @@ MonoBehaviour:
   m_DefaultPowerLevel: 0
   m_ItemTypeIdentifier:
     m_Identifier: core.itemtypes.gem
-  m_Sprite: {fileID: 21300000, guid: fde605a87f0f9b74ebd094a72f14a1c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ffd1c27a947a5a4c88ada54f783cb1b, type: 3}
   m_ItemStackDisplay: {fileID: 2739460991793205617, guid: 5c03624604db0934eb30f90420465c3a,
     type: 3}
   m_Tags:
@@ -182,3 +182,4 @@ MonoBehaviour:
   m_GenericAttack: {fileID: 2534956010336229026, guid: ae35a1ba3b917924e86a1a64d06c8ebd,
     type: 3}
   m_SecondaryActiveGems: []
+  m_DisplayPrefab: {fileID: 0}

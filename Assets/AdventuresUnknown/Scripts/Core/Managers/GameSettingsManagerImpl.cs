@@ -50,7 +50,6 @@ namespace Assets.AdventuresUnknown.Core.Managers
         #endregion
 
         #region Methods
-
         #endregion
     }
 }
