@@ -7,8 +7,11 @@ Requires [AdventuresUnknownRuntime](https://github.com/pmartschei/AdventuresUnkn
 Features:
 
 Item System with modifications
+
 Skill System
+
 Journey System (endless mode)
+
 9 Different enemies
 
 80% moddable with AdventuresUnknownRuntime
